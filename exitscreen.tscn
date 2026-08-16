@@ -1,0 +1,36 @@
+[gd_scene load_steps=0 format=3 uid="uid://c1pcx1jg77sah"]
+
+[ext_resource type="Texture2D" uid="uid://clh1tep43a8ai" path="res://exit.jpg" id="1_01hht"]
+[ext_resource type="Script" uid="uid://djsubm8uk3bxc" path="res://exitscreen.gd" id="1_5rwb1"]
+[ext_resource type="Texture2D" uid="uid://d3lt7vgrrkrob" path="res://Red_X.svg.webp" id="2_5rwb1"]
+
+[node name="Control" type="Control" unique_id=299764592]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5rwb1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=527252138]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1837049707]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_01hht")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=705650126]
+layout_mode = 0
+offset_left = 861.0
+offset_top = 703.0
+offset_right = 2149.0
+offset_bottom = 1991.0
+scale = Vector2(0.25, 0.25)
+
+[node name="Button" type="Button" parent="CenterContainer" unique_id=1847937766]
+layout_mode = 2
+icon = ExtResource("2_5rwb1")
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed"]

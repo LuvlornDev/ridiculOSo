@@ -1,0 +1,50 @@
+[gd_scene load_steps=0 format=3 uid="uid://co03qhej5wf2h"]
+
+[ext_resource type="Script" uid="uid://rw86t13by0yw" path="res://clarooscam_7.gd" id="1_hwi8k"]
+[ext_resource type="Texture2D" uid="uid://irvh5enab0kq" path="res://claro7.jpg" id="2_4kimb"]
+[ext_resource type="Texture2D" uid="uid://boqkw1inv1177" path="res://claropptxc.jpeg" id="2_hwi8k"]
+[ext_resource type="Texture2D" uid="uid://c1gxn7xfcnd61" path="res://scammer.webp" id="3_4kimb"]
+
+[node name="Control" type="Control" unique_id=1042113070]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hwi8k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1333730067]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2025761057]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_4kimb")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1940102096]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 803.0
+offset_right = 936.0
+offset_bottom = 1258.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Button" type="Button" parent="CenterContainer" unique_id=770271877]
+layout_mode = 2
+icon = ExtResource("2_hwi8k")
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=179548417]
+layout_mode = 0
+offset_left = 1300.0
+offset_top = 804.0
+offset_right = 2108.0
+offset_bottom = 1434.0
+scale = Vector2(0.4, 0.4)
+
+[node name="Button" type="Button" parent="CenterContainer2" unique_id=868111659]
+layout_mode = 2
+icon = ExtResource("3_4kimb")
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed_claro"]
+[connection signal="pressed" from="CenterContainer2/Button" to="." method="_on_button_pressed_scammer"]

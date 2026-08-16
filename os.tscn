@@ -1,0 +1,113 @@
+[gd_scene load_steps=10 format=3 uid="uid://31i2a4i5its5"]
+
+[ext_resource type="Texture2D" uid="uid://77nl26g6txol" path="res://compuscreen.jpg" id="1_6noxp"]
+[ext_resource type="Script" uid="uid://dyo3wi32ykt8g" path="res://os.gd" id="1_j81pe"]
+[ext_resource type="Texture2D" uid="uid://edrr6yl5mulc" path="res://arepita.png" id="2_xjlfo"]
+[ext_resource type="Texture2D" uid="uid://wfc03wotgwp" path="res://mango(1).png" id="3_sk6km"]
+[ext_resource type="Texture2D" uid="uid://ce24ylcwdsm1v" path="res://chocoramo.png" id="4_wrirb"]
+[ext_resource type="Texture2D" uid="uid://dgro3gpg6rhyn" path="res://instruccionestombostation16.png" id="5_l8cix"]
+[ext_resource type="Texture2D" uid="uid://bqxr5e31u2d4i" path="res://onof .png" id="7_j81pe"]
+[ext_resource type="Texture2D" uid="uid://c8e7wnf0wt41a" path="res://Flag_of_Colombia.jpg" id="7_wrirb"]
+[ext_resource type="Texture2D" uid="uid://deyc44dyvcahv" path="res://ridicul.png" id="9_eqek7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j81pe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_6noxp")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 59.0
+offset_right = 955.0
+offset_bottom = 967.0
+scale = Vector2(0.25, 0.25)
+
+[node name="Button" type="Button" parent="CenterContainer"]
+layout_mode = 2
+icon = ExtResource("2_xjlfo")
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 333.0
+offset_right = 955.0
+offset_bottom = 1241.0
+scale = Vector2(0.25, 0.25)
+
+[node name="Button" type="Button" parent="CenterContainer2"]
+layout_mode = 2
+icon = ExtResource("3_sk6km")
+
+[node name="CenterContainer4" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 594.0
+offset_right = 955.0
+offset_bottom = 1502.0
+scale = Vector2(0.25, 0.25)
+
+[node name="Button" type="Button" parent="CenterContainer4"]
+layout_mode = 2
+icon = ExtResource("4_wrirb")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
+offset_left = 1122.0
+offset_top = 248.00002
+offset_right = 1999.0
+offset_bottom = 903.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_l8cix")
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer3" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 1256.0
+offset_top = 845.0
+offset_right = 1764.0
+offset_bottom = 953.0
+
+[node name="Button" type="Button" parent="CenterContainer3"]
+layout_mode = 2
+icon = ExtResource("7_j81pe")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer3"]
+offset_left = 62.000023
+offset_top = 964.99994
+offset_right = 2874.0
+offset_bottom = 2840.0
+scale = Vector2(0.06, 0.05)
+texture = ExtResource("7_wrirb")
+
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer4"]
+offset_left = 409.0
+offset_top = 969.00006
+offset_right = 809.0
+offset_bottom = 1019.00006
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("9_eqek7")
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed_browse"]
+[connection signal="pressed" from="CenterContainer2/Button" to="." method="_on_button_pressed_emu"]
+[connection signal="pressed" from="CenterContainer4/Button" to="." method="_on_button_pressed_chocopirata"]
+[connection signal="pressed" from="CenterContainer3/Button" to="." method="_on_button_pressed"]

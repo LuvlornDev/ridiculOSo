@@ -1,0 +1,4435 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfwvp4g8xs6cr"]
+
+[ext_resource type="Texture2D" uid="uid://fyrvko18gjij" path="res://img/installer.jpg" id="1_6insb"]
+[ext_resource type="Script" uid="uid://bmwuw3cogdyyl" path="res://emumango.gd" id="1_lix4r"]
+[ext_resource type="Texture2D" uid="uid://wfc03wotgwp" path="res://mango(1).png" id="2_3fxs6"]
+[ext_resource type="Texture2D" uid="uid://qg778n0w3d2k" path="res://img/emuUI.jpg" id="2_vk3ud"]
+[ext_resource type="Texture2D" uid="uid://c4oyp4mxe5tmx" path="res://img/ads/betplay.jpg" id="5_bvw82"]
+[ext_resource type="Texture2D" uid="uid://debhqioe4w718" path="res://img/ads/neki.jpg" id="6_p2epf"]
+[ext_resource type="Texture2D" uid="uid://ctdhpri3yid0w" path="res://img/ads/mlgchoco.png" id="7_yw2ys"]
+[ext_resource type="Texture2D" uid="uid://dmb722efcn10v" path="res://img/ads/parcera.jpg" id="8_snolq"]
+[ext_resource type="Texture2D" uid="uid://dfuwk3248l4j7" path="res://img/capcha1.jpg" id="10_mjnos"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lix4r")
+
+[node name="Emu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Emu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_vk3ud")
+
+[node name="X" type="Button" parent="Emu/TextureRect"]
+layout_mode = 0
+offset_left = 1816.0
+offset_top = 9.0
+offset_right = 1872.0
+offset_bottom = 54.0
+flat = true
+
+[node name="X2" type="Button" parent="Emu/TextureRect"]
+layout_mode = 0
+offset_left = 1751.0
+offset_top = 9.0
+offset_right = 1807.0
+offset_bottom = 54.0
+flat = true
+
+[node name="X3" type="Button" parent="Emu/TextureRect"]
+layout_mode = 0
+offset_left = 1686.0
+offset_top = 9.0
+offset_right = 1742.0
+offset_bottom = 54.0
+flat = true
+
+[node name="Installer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Installer"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_6insb")
+
+[node name="X" type="Button" parent="Installer/TextureRect"]
+layout_mode = 0
+offset_left = 1674.0
+offset_top = 2.0
+offset_right = 1722.0
+offset_bottom = 27.0
+flat = true
+
+[node name="X2" type="Button" parent="Installer/TextureRect"]
+layout_mode = 0
+offset_left = 1725.0
+offset_top = 2.0
+offset_right = 1773.0
+offset_bottom = 27.0
+flat = true
+
+[node name="X3" type="Button" parent="Installer/TextureRect"]
+layout_mode = 0
+offset_left = 1777.0
+offset_top = 2.0
+offset_right = 1825.0
+offset_bottom = 27.0
+flat = true
+
+[node name="Welcome" type="Control" parent="Installer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = -93.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="logo" type="TextureRect" parent="Installer/Welcome"]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 96.00001
+offset_right = 1503.0
+offset_bottom = 996.0
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_3fxs6")
+
+[node name="Label" type="Label" parent="Installer/Welcome"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 560.0
+offset_right = 1623.0
+offset_bottom = 697.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 77
+text = "Welcome to the Emumango Installer"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Installer/Welcome"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 679.0
+offset_right = 1442.0
+offset_bottom = 748.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "The next generation totally legit game emulator"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Installer/Welcome"]
+layout_mode = 0
+offset_left = 716.5
+offset_top = 789.0
+offset_right = 1016.5
+offset_bottom = 869.0
+theme_override_font_sizes/font_size = 39
+text = "Begin!"
+
+[node name="TermsAndConditions" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Installer/TermsAndConditions"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 215.0
+offset_right = 1388.0
+offset_bottom = 803.0
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="Installer/TermsAndConditions/ScrollContainer"]
+custom_minimum_size = Vector2(1021, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "TERMS AND CONDITIONS OF SOFTWARE USAGE
+
+Last Updated: Whenever the Captain remembers to update this page.
+
+IMPORTANT NOTICE:
+
+PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY BEFORE INSTALLING, OPENING, CLICKING, DOUBLE-CLICKING, RIGHT-CLICKING, LEFT-CLICKING, THINKING ABOUT CLICKING, OR OTHERWISE INTERACTING WITH THIS SOFTWARE.
+
+By pressing the \"I AGREE\", \"CONTINUE\", \"INSTALL\", \"ARRR, I ACCEPT\", or any button which appears to be related to continuing with the installation of this software, you hereby acknowledge that you have read, understood, misunderstood, ignored, skimmed, speed-read, or otherwise become aware of these Terms and Conditions.
+
+If you do not agree to these Terms and Conditions, please close this installer immediately and return to whatever perfectly legitimate activity you were doing before finding this extremely questionable piece of software.
+
+If you have already clicked \"I Agree\" without reading this document, congratulations. You have become part of the problem.
+
+------------------------------------------------------------
+
+1. DEFINITIONS
+
+For the purposes of this Agreement:
+
+\"THE SOFTWARE\" means the application you are currently attempting to install.
+
+\"THE APPLICATION\" means the Software.
+
+\"THIS PROGRAM\" means the Application.
+
+\"THE THING\" means the Program.
+
+\"THE PACKAGE\" means the collection of files you are about to place on your computer.
+
+\"WE\", \"US\", \"OUR\", \"THE COMPANY\", \"THE DEVELOPERS\", \"THE PIRATES\", \"THE CREW\", \"THE CAPTAIN\", or \"THOSE GUYS WHO MADE THIS\" refers to the individuals responsible for creating this software.
+
+\"YOU\" refers to the person currently staring at this Terms and Conditions window.
+
+\"YOUR COMPUTER\" refers to the electronic device upon which you have chosen to install this software.
+
+\"COMPUTER\" may also refer to your laptop, desktop, toaster with a graphics card, suspiciously powerful school computer, or other compatible computing apparatus.
+
+\"EMULATION\" refers to the process by which software designed for one computing platform is reproduced or simulated on another computing platform.
+
+\"EMULATOR\" refers to software which performs emulation.
+
+\"USER\" refers to you.
+
+\"CAPTAIN\" refers to whoever currently has the highest score, owns the server, wrote the most code, or is currently shouting the loudest.
+
+\"PARROT\" refers to the theoretical bird that may or may not exist somewhere aboard the theoretical ship.
+
+\"BOOTY\" means treasure. Please stop laughing.
+
+------------------------------------------------------------
+
+2. ACCEPTANCE OF TERMS
+
+By installing or using the Software, you agree to be bound by these Terms and Conditions.
+
+If you disagree with any portion of these Terms and Conditions, you may not use the Software.
+
+If you disagree with only some of them, unfortunately there is no checkbox for that.
+
+If you disagree with all of them, congratulations on maintaining your principles.
+
+If you disagree with the Terms but click \"I Agree\" anyway, you have technically agreed to the Terms.
+
+We are not responsible for the consequences of clicking buttons without reading what they do.
+
+You may be asked to confirm your acceptance more than once.
+
+This is not because we distrust you.
+
+It is because we enjoy making buttons.
+
+------------------------------------------------------------
+
+3. THE SOFTWARE
+
+The Software is provided as-is, as-was, as-will-be, and occasionally as-why-is-it-doing-that.
+
+The Developers make no guarantee that the Software will:
+
+- Work.
+- Open.
+- Close.
+- Start.
+- Finish.
+- Stop.
+- Recognize your controller.
+- Recognize your keyboard.
+- Recognize that one very specific button on your keyboard.
+- Recognize your existence.
+- Successfully emulate anything.
+- Fail to emulate anything.
+- Not crash.
+- Crash in an entertaining manner.
+- Save your progress.
+- Remember your settings.
+- Forget your settings.
+- Behave normally.
+- Behave abnormally.
+- Behave at all.
+
+The Developers shall not be held responsible for software behaving exactly as software sometimes behaves.
+
+The Developers also make no promise that the Software will improve your life.
+
+We actually make no promises about your life whatsoever.
+
+------------------------------------------------------------
+
+4. LICENSE
+
+Subject to these Terms, you are granted a limited, non-exclusive, non-transferable, revocable license to use the Software for its intended purpose.
+
+You may install the Software on a compatible computer.
+
+You may open the Software.
+
+You may close the Software.
+
+You may stare at the Software.
+
+You may question why you installed the Software.
+
+You may complain about the Software.
+
+You may tell your friends about the Software.
+
+You may not claim that you personally invented the Software unless you actually did.
+
+You may not sell the Software and then become mysteriously surprised when we notice.
+
+You may not put the Software inside a sandwich.
+
+There is no reason for this last rule.
+
+We simply felt it was necessary.
+
+------------------------------------------------------------
+
+5. SYSTEM REQUIREMENTS
+
+The Software requires a computer.
+
+We strongly recommend having a computer that is turned on.
+
+Minimum system requirements may include:
+
+Operating System: A reasonably modern operating system.
+
+Processor: Something capable of processing instructions.
+
+Memory: RAM.
+
+Storage: Enough storage to store the Software.
+
+Graphics: Something capable of displaying pixels.
+
+Internet: Maybe.
+
+Brain: Recommended.
+
+Common Sense: Highly recommended.
+
+A functioning computer: Mandatory.
+
+A keyboard: Recommended.
+
+A mouse: Also recommended.
+
+A monitor: Surprisingly useful.
+
+If your computer does not meet these requirements, the Software may operate slowly, quickly, sideways, diagonally, or not at all.
+
+The Developers are not responsible if you attempt to install the Software on a calculator.
+
+------------------------------------------------------------
+
+6. EMULATION
+
+The Software may contain features related to emulation.
+
+Emulation is a complicated technical process involving computers pretending to be other computers.
+
+This is perfectly normal.
+
+Probably.
+
+The Developers are not responsible if your computer suddenly becomes confused about which computer it is.
+
+You agree not to blame the Software if your computer begins saying things such as:
+
+\"I remember when I was a PlayStation.\"
+
+We have no explanation for this.
+
+We also cannot guarantee that the emulated platform will remember you.
+
+------------------------------------------------------------
+
+7. COMPATIBILITY
+
+Not every game, program, file, or digital artifact is guaranteed to work with the Software.
+
+Some files may:
+
+- Work perfectly.
+- Work poorly.
+- Work upside down.
+- Produce graphical glitches.
+- Produce audio glitches.
+- Produce absolutely nothing.
+- Crash immediately.
+- Crash eventually.
+- Crash only when someone is watching.
+- Work once and never again.
+- Work after restarting the computer.
+- Work after restarting the computer twice.
+- Work for your friend but not for you.
+- Work on Tuesday but mysteriously fail on Wednesday.
+
+If a particular piece of software does not work, please do not repeatedly launch it 47 times expecting a different result.
+
+Although we respect the determination.
+
+------------------------------------------------------------
+
+8. DOWNLOADS
+
+The Software may provide functionality related to downloading files.
+
+You are responsible for ensuring that you have the legal right to download and use any content you choose to download.
+
+The Developers do not grant you ownership of any third-party content.
+
+We provide tools.
+
+What you do with those tools is your responsibility.
+
+Please do not download things you are not legally allowed to download.
+
+The Captain has spoken.
+
+The Captain would also like to remind you that \"I found it on the internet\" is generally not considered a legal defense.
+
+------------------------------------------------------------
+
+9. INTELLECTUAL PROPERTY
+
+All trademarks, logos, characters, names, sounds, images, software, and other intellectual property belonging to third parties remain the property of their respective owners.
+
+The Developers do not claim ownership over third-party intellectual property.
+
+If something belongs to somebody else, it belongs to somebody else.
+
+This is a surprisingly difficult concept for pirates.
+
+The Software itself, including its original code, artwork, interface, text, sounds, and other original materials, remains the property of the Developers unless otherwise stated.
+
+Please do not steal our stuff while using our stuff to steal other stuff.
+
+The irony would be unbearable.
+
+------------------------------------------------------------
+
+10. THE PIRATE CLAUSE
+
+Despite the suspicious aesthetic of this application, the Developers would like to formally clarify that they are not actual pirates.
+
+We do not own a ship.
+
+We do not have a treasure chest.
+
+We do not have a parrot.
+
+We have not buried treasure.
+
+If we had buried treasure, we would probably forget where we put it.
+
+Any pirate imagery, pirate terminology, pirate references, pirate hats, pirate flags, pirate sounds, pirate jokes, or excessive use of the word \"ARRR\" are purely thematic.
+
+ARRR.
+
+------------------------------------------------------------
+
+11. PIRATE TERMINOLOGY
+
+The Software may contain phrases such as:
+
+\"ARRR\"
+
+\"MATEY\"
+
+\"YE SCALLYWAG\"
+
+\"WALK THE PLANK\"
+
+\"AVAST\"
+
+\"CAPTAIN\"
+
+\"BOOTY\"
+
+\"TREASURE\"
+
+\"LAND AHOY\"
+
+\"FULL SPEED AHEAD\"
+
+These phrases are not intended to constitute actual maritime instructions.
+
+If the Software tells you to \"walk the plank\", do not walk a plank.
+
+If the Software tells you to \"abandon ship\", first determine whether there is actually a ship.
+
+If there is no ship, please remain where you are.
+
+------------------------------------------------------------
+
+12. ADVERTISEMENTS
+
+The Software may display advertisements.
+
+These advertisements may appear:
+
+- At inconvenient times.
+- In inconvenient places.
+- Slightly too close to important buttons.
+- Suspiciously close to the button you intended to press.
+- With an X button approximately the size of an atom.
+- Immediately after you successfully close another advertisement.
+- At the exact moment you were about to click something important.
+
+The Developers are not responsible for your inability to locate an advertisement's close button.
+
+The Developers are also not responsible if you accidentally click an advertisement because the close button was approximately three pixels away from where you thought it was.
+
+This is called user interface design.
+
+Probably.
+
+------------------------------------------------------------
+
+13. POPUPS
+
+You acknowledge that popup windows may appear during certain operations.
+
+You agree not to become emotionally attached to them.
+
+You also agree not to name them.
+
+The Developers specifically reject responsibility for any relationship formed between the user and a popup window.
+
+Popups are temporary.
+
+Popups are annoying.
+
+Popups are inevitable.
+
+Popups are watching.
+
+Actually, no.
+
+We are legally required to clarify that the popups are not watching you.
+
+Probably.
+
+If a popup appears and you close it, another popup may appear.
+
+This is not a bug.
+
+It is a lifestyle.
+
+------------------------------------------------------------
+
+14. PERFORMANCE
+
+The Software may consume system resources.
+
+This may include:
+
+- RAM.
+- CPU.
+- GPU.
+- Storage.
+- Battery.
+- Internet bandwidth.
+- Patience.
+- Sanity.
+- Your willingness to continue reading these Terms.
+
+The Developers shall not be responsible for any reduction in available RAM caused by the Software.
+
+If the Software displays:
+
+ERROR: NOT ENOUGH RAM
+
+please remain calm.
+
+Your RAM may be completely fine.
+
+The Software may simply be dramatic.
+
+If your computer begins making concerning noises, please investigate whether the noise is coming from the computer before blaming us.
+
+------------------------------------------------------------
+
+15. DATA
+
+The Developers do not guarantee that your data will be preserved.
+
+You should maintain backups of important files.
+
+Do not store the only copy of your extremely important school project inside a folder named:
+
+DO_NOT_DELETE_FINAL_FINAL_REAL_FINAL_2
+
+We know what you are doing.
+
+Back it up.
+
+Seriously.
+
+We are not responsible for your decision to store irreplaceable files next to a suspicious executable called \"totally_safe_final.exe\".
+
+------------------------------------------------------------
+
+16. SAVE FILES
+
+Save files may become corrupted.
+
+Save files may disappear.
+
+Save files may refuse to load.
+
+Save files may load but contain absolutely nothing useful.
+
+Save files may mysteriously become significantly larger than expected.
+
+If this happens, we recommend remaining calm and checking your backups.
+
+If you do not have backups, we recommend learning from the experience.
+
+If you lose 40 hours of progress and have no backup, we recommend staring silently at the wall for approximately six minutes before doing anything else.
+
+------------------------------------------------------------
+
+17. SECURITY
+
+You are responsible for maintaining reasonable security practices on your computer.
+
+Do not install suspicious files.
+
+Do not open suspicious attachments.
+
+Do not trust suspicious websites.
+
+Do not enter your password into a website called:
+
+FREE-MONEY-NO-SCAM-REAL.COM
+
+If you do this anyway, we cannot help you.
+
+We warned you.
+
+If a stranger offers you free cryptocurrency in exchange for your password, that is probably not a good deal.
+
+------------------------------------------------------------
+
+18. PASSWORDS
+
+The Developers will never ask you for your password through this Terms and Conditions window.
+
+If this Terms and Conditions window asks for your password:
+
+DO NOT ENTER IT.
+
+If the Terms and Conditions window starts asking for your mother's maiden name:
+
+CLOSE THE PROGRAM.
+
+If it asks for your social security number:
+
+WHY ARE YOU STILL HERE?
+
+If it asks for your blood type:
+
+SOMETHING HAS GONE VERY WRONG.
+
+------------------------------------------------------------
+
+19. COOKIES
+
+The Software may use cookies, metaphorical cookies, digital cookies, or no cookies whatsoever.
+
+Despite what the word \"cookie\" may suggest, the Software does not provide snacks.
+
+If cookies are present, please do not attempt to eat them.
+
+If you find an actual cookie inside your computer, please remove it immediately.
+
+Do not attempt to install it.
+
+------------------------------------------------------------
+
+20. INTERNET CONNECTION
+
+Certain features may require an internet connection.
+
+The Developers cannot control:
+
+- Your internet service provider.
+- Your router.
+- Your Wi-Fi.
+- Your Ethernet cable.
+- Your neighbor's Wi-Fi.
+- The weather.
+- The mysterious outage affecting only your house.
+
+If the internet stops working, please verify that your router is connected before blaming the Software.
+
+If restarting the router fixes the problem, please pretend you knew that was the solution all along.
+
+------------------------------------------------------------
+
+21. HARDWARE
+
+The Developers are not responsible for hardware damage caused by misuse, overheating, improper installation, anger, rage, frustration, throwing the computer, or attempting to \"fix\" the computer with a hammer.
+
+A hammer is not a troubleshooting tool.
+
+We cannot believe we had to write that.
+
+Do not hit the computer.
+
+The computer is innocent.
+
+------------------------------------------------------------
+
+22. BUGS
+
+The Software may contain bugs.
+
+Some bugs may be known.
+
+Some bugs may be unknown.
+
+Some bugs may be features.
+
+Some features may be bugs.
+
+Some bugs may become features.
+
+Some features may become bugs after an update.
+
+If you discover a bug, congratulations.
+
+You have discovered something we probably forgot about.
+
+If the bug is particularly impressive, please report it.
+
+If the bug is hilarious, please also report it.
+
+If the bug causes the entire screen to turn purple and display the word \"BANANA\", definitely report it.
+
+------------------------------------------------------------
+
+23. UPDATES
+
+The Developers may release updates from time to time.
+
+Updates may:
+
+- Fix bugs.
+- Add bugs.
+- Remove bugs.
+- Add features.
+- Remove features.
+- Change things.
+- Break things.
+- Make things better.
+- Make things worse.
+- Make things different.
+- Move buttons.
+- Rename buttons.
+- Make buttons slightly larger.
+- Make buttons slightly smaller for no reason.
+
+The Developers reserve the right to update the Software without asking whether you are emotionally prepared for the update.
+
+------------------------------------------------------------
+
+24. INSTALLATION
+
+During installation, the Software may display progress indicators.
+
+These indicators may or may not represent actual progress.
+
+If the installer reaches 99% and remains there for an unusually long period of time, please remain patient.
+
+If it reaches 100% and remains there forever, please remain slightly less patient.
+
+If the installer says \"Installation Complete\" but the program does not appear to exist, congratulations.
+
+You have successfully installed something.
+
+We think.
+
+------------------------------------------------------------
+
+25. UNINSTALLATION
+
+You may uninstall the Software at any time.
+
+The Developers encourage users to use the official uninstaller where available.
+
+Please do not delete random files from your computer and hope for the best.
+
+If you accidentally delete System32, we cannot help you.
+
+We really cannot help you.
+
+Please stop.
+
+------------------------------------------------------------
+
+26. TECHNICAL SUPPORT
+
+Technical support may be provided depending on availability.
+
+Before requesting support, please attempt the following:
+
+1. Close the Software.
+2. Open the Software again.
+3. Restart your computer.
+4. Check whether your computer is actually turned on.
+5. Check whether the monitor is turned on.
+6. Check whether the monitor is plugged in.
+7. Check whether the keyboard is plugged in.
+8. Check whether you accidentally turned the volume down.
+9. Check whether you are actually using the correct application.
+10. Question your life choices.
+
+If none of these work, contact support.
+
+------------------------------------------------------------
+
+27. USER CONDUCT
+
+You agree not to use the Software for unlawful purposes.
+
+You agree not to intentionally damage the Software.
+
+You agree not to attempt to crash the Software.
+
+You agree not to summon supernatural entities through the Software.
+
+You agree not to install the Software on a submarine.
+
+Unless the submarine has Windows.
+
+Then maybe.
+
+You also agree not to use the Software to annoy your friends more than is socially acceptable.
+
+There is, unfortunately, no objective measurement for this.
+
+Use your judgment.
+
+------------------------------------------------------------
+
+28. THE SUBMARINE CLAUSE
+
+The Developers make absolutely no guarantees regarding submarine compatibility.
+
+If you are currently reading these Terms and Conditions from inside a submarine, please contact your commanding officer.
+
+We have questions.
+
+Why are you installing this on a submarine?
+
+Who gave you Wi-Fi?
+
+Is the Captain aware?
+
+------------------------------------------------------------
+
+29. AIRCRAFT COMPATIBILITY
+
+The Developers also make no guarantees regarding aircraft compatibility.
+
+Please do not attempt to troubleshoot the Software while piloting an aircraft.
+
+Please do not install updates during takeoff.
+
+Please do not ask the pilot to \"just restart it.\"
+
+We are begging you.
+
+------------------------------------------------------------
+
+30. REFUNDS
+
+If the Software was obtained for free, there is nothing to refund.
+
+If you somehow paid money for this Software without us knowing about it, please contact whoever charged you.
+
+We have no idea how you managed that.
+
+If you paid someone three hundred dollars for this free application, please reconsider your financial decision-making process.
+
+------------------------------------------------------------
+
+31. MODIFICATIONS
+
+You may not modify, reverse engineer, decompile, disassemble, or otherwise tamper with the Software except where such activities are permitted by applicable law.
+
+If you modify the Software anyway and it explodes:
+
+That is between you and the Software.
+
+We were not there.
+
+We saw nothing.
+
+We know nothing.
+
+The parrot knows nothing.
+
+------------------------------------------------------------
+
+32. STREAMING AND RECORDING
+
+You may record gameplay or other interactions with the Software for personal or entertainment purposes, subject to applicable laws and the rights of third parties.
+
+If you upload a video of yourself becoming increasingly frustrated with the Software, we will probably watch it.
+
+If the video gets a million views, we will pretend we planned that.
+
+------------------------------------------------------------
+
+33. SPEEDRUNNING
+
+Speedrunning the Software is permitted.
+
+However, the Developers accept no responsibility for:
+
+- Extremely fast clicking.
+- Broken keyboards.
+- Broken mice.
+- Broken world records.
+- Emotional damage.
+- Carpal tunnel.
+- Screaming.
+- Friends asking why you are doing this.
+
+If you discover a sequence that allows you to finish the entire application in three seconds, please report it.
+
+Unless it is really funny.
+
+Then send us the video first.
+
+------------------------------------------------------------
+
+34. THE CAPTAIN'S DECISION
+
+In any situation not explicitly covered by these Terms and Conditions, the final decision shall be made by the Captain.
+
+The Captain may be:
+
+- A developer.
+- A moderator.
+- A particularly confident player.
+- A random person named Steve.
+- Nobody.
+
+The Developers reserve the right to appoint a Captain at any time.
+
+The Captain may not actually have legal authority.
+
+This clause is mostly for decoration.
+
+------------------------------------------------------------
+
+35. THE PARROT
+
+The parrot has no authority over this Agreement.
+
+The parrot cannot approve your installation.
+
+The parrot cannot reject your installation.
+
+The parrot cannot provide technical support.
+
+The parrot cannot legally represent the Developers.
+
+The parrot cannot be held liable for anything.
+
+The parrot may, however, be extremely loud.
+
+------------------------------------------------------------
+
+36. TREASURE
+
+Any reference to treasure contained within the Software is fictional unless otherwise explicitly stated.
+
+The Developers do not guarantee the existence of:
+
+- Gold.
+- Diamonds.
+- Ancient artifacts.
+- Secret maps.
+- Buried treasure.
+- Hidden chests.
+- Magical swords.
+- Islands.
+- Cursed necklaces.
+- Legendary pirate booty.
+
+If you find actual treasure while using the Software, please contact the Developers immediately.
+
+Actually, don't.
+
+Keep it.
+
+We have changed our minds.
+
+------------------------------------------------------------
+
+37. USER PRIVACY
+
+The Developers respect user privacy.
+
+The Software should not be interpreted as granting the Developers unlimited access to your computer.
+
+The Developers do not need to know what is inside your Downloads folder.
+
+We do not want to know.
+
+We especially do not want to know why there are 47 copies of the same file.
+
+Clean your Downloads folder.
+
+------------------------------------------------------------
+
+38. THIRD-PARTY SERVICES
+
+The Software may interact with third-party services.
+
+Third-party services are controlled by their respective operators.
+
+The Developers cannot guarantee that third-party services will remain available.
+
+If a third-party service disappears overnight, please do not blame the Software.
+
+If a website changes its layout and everything breaks, please do not blame the Software.
+
+Actually, you can blame the Software a little.
+
+------------------------------------------------------------
+
+39. COMPATIBILITY WITH OTHER SOFTWARE
+
+The Software may interact poorly with other applications.
+
+Possible conflicts may include:
+
+- Antivirus software.
+- Firewalls.
+- Overlays.
+- Screen recorders.
+- Game launchers.
+- Voice chat programs.
+- RGB lighting software.
+- Extremely aggressive calculator applications.
+
+If your RGB keyboard stops glowing because of this Software, please remain calm.
+
+Your keyboard is still a keyboard.
+
+It simply has fewer lights.
+
+------------------------------------------------------------
+
+40. BATTERY LIFE
+
+If you use the Software on a laptop, battery life may decrease.
+
+This is because computers require electricity.
+
+This is not a revolutionary discovery.
+
+The Developers are not responsible if you begin the Software at 100% battery and finish at 2%.
+
+Please bring your charger.
+
+------------------------------------------------------------
+
+41. WEATHER
+
+The Software does not control the weather.
+
+If it rains while you are installing the Software, this is a coincidence.
+
+If it stops raining after you close the Software, this is also a coincidence.
+
+If it starts raining whenever you open the Software, we recommend investigating your local weather patterns.
+
+------------------------------------------------------------
+
+42. TIME
+
+The Developers are not responsible for time lost while using the Software.
+
+If you begin playing at 8:00 PM and suddenly realize it is 3:00 AM, this is between you and your clock.
+
+Please sleep.
+
+Seriously.
+
+------------------------------------------------------------
+
+43. FOOD
+
+Do not eat while operating the Software if doing so causes you to spill food on your keyboard.
+
+The Developers are not responsible for:
+
+- Soda damage.
+- Pizza damage.
+- Crumb damage.
+- Sauce damage.
+- Coffee damage.
+- Mysterious sticky key damage.
+
+Keep your food away from your electronics.
+
+Your keyboard does not need dinner.
+
+------------------------------------------------------------
+
+44. EMOTIONAL DAMAGE
+
+The Developers are not responsible for emotional damage caused by:
+
+- Losing progress.
+- Missing an important button.
+- Getting defeated.
+- Failing a challenge.
+- Accidentally clicking something.
+- Seeing an advertisement.
+- Seeing another advertisement.
+- Seeing the third advertisement.
+- Realizing there are five more advertisements.
+
+If the Software causes you to yell \"NOOOOOOO\", that is unfortunate.
+
+But also slightly entertaining.
+
+------------------------------------------------------------
+
+45. SOUND
+
+The Software may produce sounds.
+
+These sounds may include:
+
+- Music.
+- Effects.
+- Notifications.
+- Alerts.
+- Clicks.
+- Beeps.
+- Boops.
+- Unexpected noises.
+
+Please adjust the volume appropriately.
+
+Do not blame the Developers if you open the Software at full volume in a quiet classroom.
+
+You have been warned.
+
+------------------------------------------------------------
+
+46. CLASSROOM USE
+
+The Developers do not recommend running the Software during important classes.
+
+If your teacher asks why your computer is displaying eight suspicious advertisements and a pirate website, please do not say:
+
+\"The Terms and Conditions told me to.\"
+
+They did not.
+
+------------------------------------------------------------
+
+47. SCHOOL COMPUTERS
+
+If you are using a school-owned computer, make sure you have permission to install software.
+
+Do not attempt to bypass administrative restrictions.
+
+Do not attempt to become the administrator.
+
+Do not rename yourself \"Administrator\" and assume this makes you the administrator.
+
+It does not.
+
+We admire the confidence, however.
+
+------------------------------------------------------------
+
+48. LEGAL COMPLIANCE
+
+You are responsible for complying with all applicable laws and regulations when using the Software.
+
+The Developers do not encourage illegal activity.
+
+The Developers do not provide legal advice.
+
+The Developers do not know the laws of every country.
+
+The Captain barely knows the laws of this ship.
+
+------------------------------------------------------------
+
+49. INTERNATIONAL USERS
+
+The Software may be used by people from many different places.
+
+Local laws may differ.
+
+Some things that are permitted in one country may not be permitted in another.
+
+Please investigate your local laws if you are unsure.
+
+Do not ask the parrot.
+
+The parrot has no idea.
+
+------------------------------------------------------------
+
+50. TERMINATION
+
+You may stop using the Software at any time.
+
+Simply uninstall it.
+
+The Software will not chase you.
+
+The Software will not send someone to your house.
+
+The Software will not hide under your bed.
+
+The Software will not steal your socks.
+
+We promise.
+
+If you uninstall the Software, we will respect your decision.
+
+We may be sad.
+
+But we will respect it.
+
+------------------------------------------------------------
+
+51. ACCEPTABLE USE
+
+You agree to use the Software in a reasonable manner.
+
+What constitutes \"reasonable\" is intentionally vague.
+
+If you are doing something and think:
+
+\"Surely nobody intended me to do this.\"
+
+You are probably correct.
+
+------------------------------------------------------------
+
+52. FORBIDDEN ACTIVITIES
+
+You may not use the Software to:
+
+- Break the law.
+- Harm other people.
+- Damage other computers.
+- Distribute malicious software.
+- Harass others.
+- Pretend to be the Developers.
+- Pretend to be the Captain.
+- Pretend to be the parrot.
+- Claim the parrot wrote the Software.
+- Attempt to marry the parrot.
+
+The final rule was added after an incident.
+
+We will not discuss the incident.
+
+------------------------------------------------------------
+
+53. BACKUPS
+
+You are strongly encouraged to maintain backups.
+
+A backup is a copy of important information stored somewhere other than the original location.
+
+For example:
+
+Computer → Backup Drive
+
+is good.
+
+Computer → Another folder on the same computer
+
+is less good.
+
+Computer → \"I'll remember it\"
+
+is not a backup.
+
+Your memory is not cloud storage.
+
+------------------------------------------------------------
+
+54. CLOUD STORAGE
+
+Cloud storage is not actually stored inside clouds.
+
+We feel this clarification is important.
+
+The files are stored on physical computers somewhere.
+
+Please do not attempt to retrieve them by looking into the sky.
+
+------------------------------------------------------------
+
+55. SUPPORT HOURS
+
+Technical support hours may vary.
+
+If nobody responds to your message at 3:47 AM, please understand that the Developers may be asleep.
+
+If nobody responds at 3:47 PM, they may also be asleep.
+
+Developers require sleep.
+
+Sometimes.
+
+------------------------------------------------------------
+
+56. DOCUMENTATION
+
+Documentation may contain errors.
+
+If the documentation says:
+
+\"Click the red button.\"
+
+and the button is blue:
+
+Please click the button that looks like the button we described.
+
+If there is no button:
+
+We apologize.
+
+------------------------------------------------------------
+
+57. FUTURE FEATURES
+
+The Developers may discuss future features.
+
+Future features are not guaranteed.
+
+If we say:
+
+\"Maybe we'll add multiplayer.\"
+
+that does not mean multiplayer will be added.
+
+If we say:
+
+\"Multiplayer coming soon.\"
+
+that means we probably have no idea when multiplayer is coming.
+
+If we say:
+
+\"Multiplayer is finished.\"
+
+then congratulations.
+
+------------------------------------------------------------
+
+58. RANDOMNESS
+
+Certain parts of the Software may contain random behavior.
+
+This randomness may cause events to happen in different orders.
+
+If something happens twice in a row, it may still be random.
+
+If something happens 37 times in a row, we may have accidentally written the code incorrectly.
+
+Please report this.
+
+------------------------------------------------------------
+
+59. THE GOLDEN RULE OF TROUBLESHOOTING
+
+When something goes wrong:
+
+Do not panic.
+
+Do not hit the computer.
+
+Do not throw the computer.
+
+Do not yell at the computer.
+
+Do not threaten the computer.
+
+The computer cannot understand you.
+
+Probably.
+
+Instead:
+
+1. Read the error message.
+2. Restart the application.
+3. Check the documentation.
+4. Restart the computer.
+5. Ask for help.
+6. Accept that sometimes computers are weird.
+
+------------------------------------------------------------
+
+60. FINAL DISCLAIMER
+
+This Software is provided for entertainment and fictional purposes.
+
+Nothing contained within this Agreement should be interpreted as legal advice.
+
+The Developers are not lawyers.
+
+The Captain is definitely not a lawyer.
+
+The parrot is also not a lawyer.
+
+The parrot has not completed law school.
+
+Do not ask the parrot for legal advice.
+
+------------------------------------------------------------
+
+61. ACKNOWLEDGEMENT
+
+By clicking \"I AGREE\", you acknowledge that:
+
+- You have read these Terms.
+- You understand these Terms.
+- You probably didn't read these Terms.
+- You are currently scrolling through a very long textbox.
+- You have wondered how much longer this document is.
+- You have probably considered clicking \"I Agree\" without finishing.
+- We knew you would do this.
+- You have reached a considerable distance into this document.
+- You deserve a small break.
+- There is still more.
+
+Nevertheless, you are hereby considered to have been informed.
+
+------------------------------------------------------------
+
+62. FINAL FINAL DISCLAIMER
+
+By continuing, you confirm that you are sufficiently confident in your decision to install this questionable software.
+
+You accept responsibility for your own decisions.
+
+You acknowledge that computers are complicated.
+
+You acknowledge that pirates are fictional.
+
+You acknowledge that the installer is probably fine.
+
+Probably.
+
+You acknowledge that clicking \"I AGREE\" is your own decision.
+
+You acknowledge that you could have stopped reading approximately 1,500 words ago.
+
+You didn't.
+
+Respect.
+
+------------------------------------------------------------
+
+63. THE ABSOLUTELY FINAL DISCLAIMER
+
+This is the final disclaimer.
+
+Probably.
+
+If another disclaimer appears below this one, then this was not actually the final disclaimer.
+
+We apologize for the confusion.
+
+Legal documents are complicated.
+
+Pirate legal documents are considerably worse.
+
+------------------------------------------------------------
+
+64. AGREEMENT TO STOP READING
+
+At this point, you have read enough.
+
+You are permitted to stop.
+
+You may scroll to the bottom.
+
+Nobody will know.
+
+Except the scrollbar.
+
+The scrollbar knows everything.
+
+------------------------------------------------------------
+
+65. ACCEPTANCE
+
+If you agree to these Terms and Conditions, click:
+
+I AGREE
+
+If you do not agree:
+
+I DO NOT AGREE
+
+If you are unsure:
+
+Ask the Captain.
+
+If the Captain is unavailable:
+
+Ask the parrot.
+
+If the parrot is unavailable:
+
+Ask nobody.
+
+If nobody is available:
+
+Use your best judgment.
+
+If your best judgment is unavailable:
+
+Please restart your computer.
+
+------------------------------------------------------------
+
+66. THE CAPTAIN'S FINAL STATEMENT
+
+The Captain has reviewed this document.
+
+The Captain has decided that it is sufficiently long.
+
+The Captain would like you to stop reading.
+
+The Captain would like you to install the software.
+
+The Captain would also like a sandwich.
+
+Nobody knows why.
+
+------------------------------------------------------------
+
+67. FINAL FINAL FINAL ACCEPTANCE
+
+By pressing the acceptance button, you confirm that you have read, understood, ignored, skimmed, or otherwise encountered these Terms and Conditions.
+
+You agree to use the Software responsibly.
+
+You agree not to blame the Developers for things clearly caused by you.
+
+You agree not to blame the parrot.
+
+You agree not to blame the Captain.
+
+You agree not to blame the ship.
+
+There is no ship.
+
+------------------------------------------------------------
+
+END OF TERMS AND CONDITIONS
+
+Thank you for reading.
+
+Seriously.
+
+Thank you.
+
+You made it.
+
+ARRR.
+
+Now install the thing.
+
+Please.
+
+We have been waiting here for a very long time."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Installer/TermsAndConditions"]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 811.0
+offset_right = 833.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I accept."
+
+[node name="Button2" type="Button" parent="Installer/TermsAndConditions"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 811.0
+offset_right = 1256.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I deny."
+
+[node name="Ad" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="TextureRect" type="TextureRect" parent="Installer/Ad"]
+layout_mode = 0
+offset_left = 402.00006
+offset_top = 63.000008
+offset_right = 2034.0
+offset_bottom = 1287.0
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("5_bvw82")
+
+[node name="Button" type="Button" parent="Installer/Ad"]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 811.0
+offset_right = 833.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I accept."
+
+[node name="Button2" type="Button" parent="Installer/Ad"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 811.0
+offset_right = 1256.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I deny."
+
+[node name="PrivacyPolicy" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Installer/PrivacyPolicy"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 215.0
+offset_right = 1388.0
+offset_bottom = 803.0
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="Installer/PrivacyPolicy/ScrollContainer"]
+custom_minimum_size = Vector2(1021, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "PRIVACY POLICY
+
+Last Updated: The moment somebody remembered that we were supposed to have a Privacy Policy.
+
+Welcome to the Privacy Policy for this Software.
+
+This document explains what information may be collected, what information may not be collected, what information we wish we could collect but absolutely cannot, what information your computer thinks we collected, and what the Captain claims he has never seen.
+
+PLEASE READ THIS PRIVACY POLICY CAREFULLY.
+
+By installing, launching, opening, closing, minimizing, maximizing, clicking, double-clicking, right-clicking, accidentally clicking, intentionally clicking, or merely looking at this Software, you acknowledge that you have encountered this Privacy Policy.
+
+You do not necessarily need to understand it.
+
+We barely do.
+
+------------------------------------------------------------
+
+1. WHO ARE WE?
+
+We are the Developers.
+
+We created this Software.
+
+We are not the government.
+
+We are not your internet provider.
+
+We are not your bank.
+
+We are not your parents.
+
+We are not your school.
+
+We are not your teacher.
+
+We are not your Wi-Fi router.
+
+We are definitely not your webcam.
+
+We are simply the people who made this questionable piece of software and decided that it probably needed a Privacy Policy.
+
+For the purposes of this Privacy Policy, we may refer to ourselves as:
+
+- \"We\"
+- \"Us\"
+- \"Our\"
+- \"The Developers\"
+- \"The Company\"
+- \"The Crew\"
+- \"The Pirates\"
+- \"The People Who Made This\"
+- \"The Captain\"
+- \"Those Guys\"
+- \"Whoever Is Maintaining The Project\"
+
+All of these terms mean approximately the same thing.
+
+------------------------------------------------------------
+
+2. WHAT IS THIS PRIVACY POLICY?
+
+This Privacy Policy explains how information may be handled when you use the Software.
+
+It is intended to provide transparency.
+
+It is also intended to look extremely official.
+
+Please do not let the extremely official formatting convince you that we have an office.
+
+We do not necessarily have an office.
+
+We may have desks.
+
+We may have chairs.
+
+One of us may have a very suspiciously large collection of cables.
+
+That does not count as an office.
+
+------------------------------------------------------------
+
+3. OUR APPROACH TO PRIVACY
+
+We believe privacy is important.
+
+Very important.
+
+Extremely important.
+
+So important that we wrote this enormous document explaining how much we care about it.
+
+We believe users should understand what information software collects.
+
+We also believe users should not have to read 47 pages of legal text just to launch an emulator.
+
+Unfortunately, we have already written 47 pages of legal text.
+
+We apologize.
+
+------------------------------------------------------------
+
+4. INFORMATION WE COLLECT
+
+The Software may collect certain information depending on how it is configured and what features you use.
+
+However, we do not automatically collect every piece of information that exists on your computer.
+
+We do not have magical access to everything.
+
+We cannot simply look at your hard drive and say:
+
+\"Ah yes. Folder named 'homework'. Very suspicious.\"
+
+We cannot see your entire computer simply because you installed the Software.
+
+Your files remain your files.
+
+Your folders remain your folders.
+
+Your extremely embarrassing Downloads folder remains your responsibility.
+
+------------------------------------------------------------
+
+5. INFORMATION WE MAY COLLECT
+
+Depending on the version of the Software, we may collect limited technical information such as:
+
+- Software version.
+- Operating system.
+- General hardware information.
+- Basic performance information.
+- Error messages.
+- Crash information.
+- Feature usage statistics.
+- Installation status.
+- Update status.
+- General diagnostic information.
+
+This information may help us determine why the Software suddenly decided to stop working at 2:14 PM on a Tuesday.
+
+We may use this information to improve the Software.
+
+We may also stare at a crash log for 45 minutes and eventually say:
+
+\"That's weird.\"
+
+------------------------------------------------------------
+
+6. INFORMATION WE DO NOT WANT
+
+There are many types of information we do not need.
+
+For example:
+
+- Your password.
+- Your bank account number.
+- Your credit card number.
+- Your school password.
+- Your social media password.
+- Your email password.
+- Your Wi-Fi password.
+- Your PIN.
+- Your secret Minecraft world seed.
+- Your diary.
+- Your browser history.
+- Your search history.
+- Your embarrassing screenshots.
+- Your extremely questionable folder called \"stuff\".
+
+Please do not send us these things.
+
+Especially the passwords.
+
+We do not want them.
+
+------------------------------------------------------------
+
+7. PASSWORDS
+
+WE DO NOT WANT YOUR PASSWORD.
+
+If someone claiming to be us asks for your password, do not give it to them.
+
+If an email claiming to be from us says:
+
+\"URGENT! SEND PASSWORD OR CAPTAIN WILL BE ANGRY!\"
+
+do not send your password.
+
+If a popup inside the Software says:
+
+\"ENTER YOUR PASSWORD TO UNLOCK THE TREASURE\"
+
+do not enter your password.
+
+There is no treasure.
+
+Probably.
+
+If somebody asks for your password and offers you a pirate hat in exchange:
+
+Still no.
+
+------------------------------------------------------------
+
+8. YOUR FILES
+
+The Software may need access to files that you explicitly choose to open or use.
+
+For example, if you select a file for the Software to process, the Software obviously needs to access that file.
+
+This does not mean we automatically receive a copy of it.
+
+We are not secretly downloading your files onto a pirate ship.
+
+We do not have a pirate ship.
+
+We have established this already.
+
+------------------------------------------------------------
+
+9. YOUR GAME FILES
+
+If you use the Software with game files, you are responsible for ensuring that you have the appropriate rights to use those files.
+
+We do not automatically know where your files came from.
+
+We do not sit in a control room monitoring your Downloads folder.
+
+We are not sitting there saying:
+
+\"Captain! Another file has appeared!\"
+
+\"Excellent! Add it to the spreadsheet!\"
+
+No such spreadsheet exists.
+
+------------------------------------------------------------
+
+10. YOUR BROWSER HISTORY
+
+We do not need your browser history.
+
+We do not want your browser history.
+
+We especially do not want to know what you searched at 3:00 AM last Friday.
+
+If your browser history is embarrassing, that is between you and your browser.
+
+Please leave us out of it.
+
+------------------------------------------------------------
+
+11. SEARCH QUERIES
+
+If the Software includes a search feature, information you enter into that feature may be processed by the Software in order to provide the requested functionality.
+
+Depending on how the feature is implemented, search queries may be processed locally.
+
+If a search query is sent to an external service, that service may have its own privacy policy.
+
+Please review the privacy policy of third-party services where appropriate.
+
+Also, please stop searching for:
+
+\"how to become a pirate legally\"
+
+We have no idea.
+
+------------------------------------------------------------
+
+12. COOKIES
+
+The Software may use cookies where technically necessary.
+
+Cookies are small pieces of information used by software and websites.
+
+They are not chocolate chip cookies.
+
+They cannot be eaten.
+
+Do not attempt to eat a cookie from your computer.
+
+If you somehow find an actual cookie inside your computer, remove it immediately.
+
+Do not put milk inside your computer.
+
+We cannot believe we have to say this.
+
+------------------------------------------------------------
+
+13. TRACKING
+
+We do not intend to track your physical location through supernatural pirate magic.
+
+We do not have a crystal ball.
+
+We do not have a GPS satellite.
+
+We do not have a guy sitting in a room drawing dots on a map.
+
+We may receive general technical information when you interact with online services, but this does not mean we automatically know where you live.
+
+We do not need to know where you live.
+
+Please remain where you are.
+
+------------------------------------------------------------
+
+14. IP ADDRESSES
+
+If the Software connects to an online service, that service may technically receive your IP address.
+
+This is normal internet behavior.
+
+An IP address may provide general information about a network connection.
+
+An IP address is not necessarily your exact physical address.
+
+We are not going to show up at your house because your IP address said you were somewhere nearby.
+
+We don't even know where the Captain lives.
+
+------------------------------------------------------------
+
+15. LOCATION INFORMATION
+
+The Software does not require precise GPS location information for its basic functionality.
+
+We do not need to know whether you are:
+
+- In your bedroom.
+- In your kitchen.
+- At school.
+- At a friend's house.
+- In a library.
+- On a bus.
+- On a boat.
+- In a submarine.
+
+Especially the submarine.
+
+We are still confused about that.
+
+------------------------------------------------------------
+
+16. CAMERA ACCESS
+
+The Software does not require access to your camera for normal operation unless explicitly stated by a particular feature.
+
+If a feature does not need your camera, there is no reason for it to access your camera.
+
+If you ever see a suspicious application asking for camera access without a clear reason:
+
+Do not blindly approve it.
+
+Think before clicking.
+
+Your webcam is not decorative.
+
+------------------------------------------------------------
+
+17. MICROPHONE ACCESS
+
+The same principle applies to your microphone.
+
+If the Software does not require your microphone, it should not need access to it.
+
+We are not interested in listening to:
+
+- Your conversations.
+- Your music.
+- Your pets.
+- Your keyboard.
+- Your parents asking whether you've done your homework.
+- You screaming at the computer because an emulator crashed.
+
+Although the last one might be funny.
+
+We still don't need the recording.
+
+------------------------------------------------------------
+
+18. CONTACTS
+
+The Software does not need your contact list for normal operation.
+
+We do not need to know who your friends are.
+
+We do not need to know who your family members are.
+
+We do not need to know who you keep texting at midnight.
+
+Your contacts are yours.
+
+Keep them.
+
+------------------------------------------------------------
+
+19. PERSONAL INFORMATION
+
+Personal information may include information that can identify or reasonably relate to an individual.
+
+Examples may include:
+
+- Name.
+- Email address.
+- Account information.
+- Device information.
+- IP address.
+- Other information depending on context.
+
+We encourage you not to provide unnecessary personal information when contacting us.
+
+If you send us an email saying:
+
+\"HELP THE PROGRAM DOESN'T WORK\"
+
+that is enough.
+
+You do not need to include:
+
+\"My name is [full legal name], I live at [full address], my password is [password], and my mother's maiden name is [name].\"
+
+Please don't.
+
+------------------------------------------------------------
+
+20. EMAIL
+
+If you contact us through email, we will receive the information you choose to include in your message.
+
+This may include your email address, name, message, attachments, and other information you voluntarily provide.
+
+Please remember:
+
+The internet is not a magical privacy vacuum.
+
+Do not send sensitive information unless necessary.
+
+If your message contains a password, delete the password and send the message again.
+
+We are serious.
+
+------------------------------------------------------------
+
+21. SUPPORT REQUESTS
+
+When you contact support, we may ask for technical information needed to understand your problem.
+
+For example:
+
+\"What operating system are you using?\"
+
+is reasonable.
+
+\"Please send us your bank password.\"
+
+is not.
+
+\"Please send us a screenshot of the error.\"
+
+is reasonable.
+
+\"Please send us a screenshot of your entire desktop including all your private conversations.\"
+
+is probably unnecessary.
+
+Use common sense.
+
+------------------------------------------------------------
+
+22. CRASH REPORTS
+
+If crash reporting is enabled, technical information about a crash may be collected.
+
+Crash information can help us determine what caused the Software to stop functioning.
+
+It may include:
+
+- Error messages.
+- Stack traces.
+- Software version.
+- Operating system.
+- Hardware information.
+- Relevant configuration information.
+
+It should not require us to know your deepest secrets.
+
+Your computer crashing does not mean your privacy has crashed.
+
+------------------------------------------------------------
+
+23. LOG FILES
+
+The Software may create local log files.
+
+Logs may contain technical information used to diagnose problems.
+
+Logs might contain things like:
+
+\"Loading emulator.\"
+
+\"Loading configuration.\"
+
+\"Something went wrong.\"
+
+\"Something went very wrong.\"
+
+\"WHY.\"
+
+\"Attempting recovery.\"
+
+\"Recovery unsuccessful.\"
+
+\"Developer has been notified.\"
+
+\"Developer has not actually been notified.\"
+
+We are working on that last one.
+
+------------------------------------------------------------
+
+24. LOCAL STORAGE
+
+Some settings may be stored locally on your device.
+
+These may include:
+
+- Preferences.
+- Configuration settings.
+- Save information.
+- Recently used options.
+- Interface settings.
+
+Local storage means the information stays on your device unless another process copies or transmits it.
+
+Please remember that other applications on your computer may also have access to files depending on your operating system permissions.
+
+We cannot control every application installed on your computer.
+
+------------------------------------------------------------
+
+25. DATA SECURITY
+
+We take reasonable measures to protect information that we control.
+
+However, no computer system is perfectly secure.
+
+No network is perfectly secure.
+
+No software is perfectly secure.
+
+No password is perfectly secure.
+
+\"Password123\" is especially not secure.
+
+Neither is:
+
+\"qwerty\"
+
+Neither is:
+
+\"admin\"
+
+Neither is:
+
+\"pirate\"
+
+We checked.
+
+Please use strong passwords.
+
+------------------------------------------------------------
+
+26. DATA BREACHES
+
+If a security incident occurs that affects information under our control, we may take appropriate steps to investigate and respond.
+
+Depending on applicable law, we may also notify affected users or authorities where required.
+
+We hope this never happens.
+
+If it does happen, please remain calm.
+
+Do not immediately assume that every piece of information on your computer has been stolen.
+
+------------------------------------------------------------
+
+27. DATA RETENTION
+
+We retain information only for as long as reasonably necessary for the purposes for which it was collected, unless a longer retention period is required or permitted by law.
+
+Technical logs may eventually be deleted.
+
+Support emails may remain available for record-keeping purposes.
+
+Crash reports may be retained for debugging.
+
+Your embarrassing search for \"pirate hats near me\" is not something we intend to archive forever.
+
+------------------------------------------------------------
+
+28. DELETION
+
+Depending on the type of information and applicable law, you may have rights regarding deletion of personal information.
+
+If you want information removed, contact the appropriate support channel.
+
+Please understand that deleting information from every possible backup instantly may not always be technically possible.
+
+Computers have backups.
+
+Backups have backups.
+
+Somewhere, there is probably a backup of a backup.
+
+We are sorry.
+
+------------------------------------------------------------
+
+29. BACKUPS
+
+We may maintain backups for security, reliability, or operational purposes.
+
+Backups are not necessarily immediately deleted when information is deleted from an active system.
+
+This is normal.
+
+We are not secretly keeping your information in a treasure chest.
+
+If we did have a treasure chest, we would probably put gold in it.
+
+Not your email address.
+
+------------------------------------------------------------
+
+30. THIRD-PARTY SERVICES
+
+The Software may interact with third-party services.
+
+These services may have their own privacy policies.
+
+We are not responsible for the privacy practices of third parties that we do not control.
+
+If you click a link and leave our Software, you should review the privacy policy of the destination service.
+
+Do not assume every website on the internet follows the same rules.
+
+Some websites are weird.
+
+Some websites are extremely weird.
+
+------------------------------------------------------------
+
+31. ADVERTISING
+
+Advertisements may be provided by third-party services.
+
+Third-party advertising providers may collect information according to their own policies.
+
+We may not control what information those services collect.
+
+Advertisements may use technical information to determine which advertisements to display.
+
+This does not mean someone is personally sitting behind a computer saying:
+
+\"Show this person an advertisement for socks.\"
+
+Although somebody probably is.
+
+------------------------------------------------------------
+
+32. THE ADVERTISEMENTS ARE NOT OUR FAULT
+
+If an advertisement says:
+
+\"YOU WON $1,000,000!\"
+
+you probably did not.
+
+If an advertisement says:
+
+\"YOUR COMPUTER HAS 47 VIRUSES!\"
+
+you should probably verify that claim.
+
+If an advertisement says:
+
+\"CLICK HERE TO BECOME A PIRATE!\"
+
+we cannot recommend it.
+
+We are already pirates enough.
+
+------------------------------------------------------------
+
+33. POPUPS
+
+Certain fictional or game-related versions of the Software may display simulated advertisements or popup windows.
+
+These may appear intentionally as part of the Software's experience.
+
+These simulated advertisements are not necessarily real advertisements.
+
+If a popup says:
+
+\"CONGRATULATIONS! YOU ARE THE 1,000,000TH VISITOR!\"
+
+you are probably not.
+
+If a popup says:
+
+\"ERROR: NOT ENOUGH RAM\"
+
+your RAM may actually be completely fine.
+
+The Software may simply be dramatic.
+
+------------------------------------------------------------
+
+34. ANALYTICS
+
+If analytics are enabled, analytics may help us understand general usage patterns.
+
+For example:
+
+- Which features are used.
+- Which features crash.
+- Which screens are opened.
+- Which buttons are pressed.
+- How frequently certain features are used.
+
+Analytics should be designed to provide useful information without unnecessarily identifying individual users.
+
+We don't need to know that Steve from Apartment 4B clicked the Settings button fourteen times.
+
+Unless Steve is doing something suspicious.
+
+------------------------------------------------------------
+
+35. CHILDREN'S PRIVACY
+
+The Software is not designed to intentionally collect unnecessary personal information from children.
+
+We do not intentionally ask children to provide sensitive information.
+
+If you are a young user, do not provide personal information simply because an application asks for it.
+
+If a software program asks you for your home address, school, phone number, and favorite pizza before letting you open a settings menu:
+
+Close it.
+
+Immediately.
+
+------------------------------------------------------------
+
+36. PARENTS AND GUARDIANS
+
+Parents and guardians are encouraged to help younger users understand online privacy.
+
+Do not assume that because an application has a cute logo it is trustworthy.
+
+Do not assume that because a website has a padlock it is automatically safe.
+
+Do not assume that because a person on the internet calls themselves \"CaptainPirateOfficial\" they are actually the Captain.
+
+They probably aren't.
+
+------------------------------------------------------------
+
+37. SOCIAL MEDIA
+
+We may maintain social media accounts for the Software or development project.
+
+Interactions on third-party social media platforms are subject to the privacy policies of those platforms.
+
+If you publicly comment on one of our posts, other people may see your comment.
+
+This is generally how public comments work.
+
+Please do not publicly post your password.
+
+Seriously.
+
+------------------------------------------------------------
+
+38. USER CONTENT
+
+If you voluntarily submit content to us, such as:
+
+- Bug reports.
+- Suggestions.
+- Screenshots.
+- Feedback.
+- Messages.
+- Fan art.
+- Memes.
+- Pirate drawings.
+- Extremely long explanations of why the emulator crashed.
+
+we may receive and process that content for purposes such as support, development, moderation, or communication.
+
+If you send us a meme, we may laugh.
+
+We cannot guarantee that we will laugh.
+
+Humor is subjective.
+
+------------------------------------------------------------
+
+39. MEMES
+
+Memes submitted to us may be viewed by the development team.
+
+If the meme is terrible, we reserve the right to silently judge it.
+
+This is not a legal right.
+
+It is an emotional right.
+
+------------------------------------------------------------
+
+40. DATA SOLD TO PIRATES
+
+We do not sell your personal information to pirates.
+
+Mainly because pirates do not have a functional data marketplace.
+
+Also because we do not want to sell your personal information.
+
+If somebody offers to buy your personal information in exchange for gold coins, do not accept.
+
+Unless the gold coins are real.
+
+Then contact us.
+
+Just kidding.
+
+Do not.
+
+------------------------------------------------------------
+
+41. YOUR DATA IS NOT TREASURE
+
+Your information is not treasure.
+
+We do not bury it.
+
+We do not put it in chests.
+
+We do not draw maps leading to it.
+
+We do not mark it with a giant red X.
+
+We do not guard it with skeletons.
+
+We do not make you walk across an island to retrieve it.
+
+Your information should be handled through boring computer systems.
+
+This is preferable.
+
+------------------------------------------------------------
+
+42. INTERNATIONAL DATA TRANSFERS
+
+Depending on where you live and where our services operate, information may be processed in countries other than your own.
+
+Different countries may have different privacy laws.
+
+Where required, appropriate safeguards may be used for international transfers.
+
+We realize this sounds extremely boring.
+
+That is because it is.
+
+Privacy law is sometimes boring.
+
+Pirate law is significantly more entertaining.
+
+Unfortunately, pirate law is not real.
+
+------------------------------------------------------------
+
+43. YOUR PRIVACY RIGHTS
+
+Depending on your location, you may have rights concerning your personal information.
+
+These may include rights to:
+
+- Access certain information.
+- Correct inaccurate information.
+- Request deletion.
+- Object to certain processing.
+- Restrict certain processing.
+- Request a copy of information.
+- Withdraw consent where processing is based on consent.
+
+The exact rights available to you depend on applicable law.
+
+We cannot provide legal advice through this Privacy Policy.
+
+The parrot cannot provide legal advice either.
+
+------------------------------------------------------------
+
+44. ACCESS REQUESTS
+
+If you request access to personal information associated with you, we may need enough information to verify that you are actually the person making the request.
+
+We do this to protect privacy.
+
+Otherwise, anyone could email:
+
+\"Hello, please give me all of Steve's information.\"
+
+and we would have to say:
+
+\"No.\"
+
+Steve's information belongs to Steve.
+
+Probably.
+
+We don't even know who Steve is.
+
+------------------------------------------------------------
+
+45. CORRECTION REQUESTS
+
+If information we hold about you is inaccurate, you may be able to request correction.
+
+For example:
+
+If your name is \"Santiago\" and we somehow have it recorded as \"Captain Banana\":
+
+we should probably fix that.
+
+Unless your name actually is Captain Banana.
+
+In which case:
+
+Congratulations.
+
+------------------------------------------------------------
+
+46. DELETION REQUESTS
+
+If applicable law gives you the right to request deletion of certain information, you may contact us through the appropriate channel.
+
+We will review the request.
+
+Some information may need to be retained where required by law or for legitimate technical or security purposes.
+
+No, this does not mean we are hiding a secret vault.
+
+Probably.
+
+------------------------------------------------------------
+
+47. CONSENT
+
+Where required, we may ask for consent before collecting or using certain information.
+
+Consent should be voluntary.
+
+If you don't understand what you're agreeing to, you should take the time to understand it.
+
+This Privacy Policy is approximately 900 miles long, so we understand if you skipped some of it.
+
+------------------------------------------------------------
+
+48. WITHDRAWING CONSENT
+
+Where processing is based on consent, you may generally withdraw that consent.
+
+Withdrawing consent may affect certain features.
+
+If you disable something and the Software stops doing that thing, this is probably intentional.
+
+If you disable everything and the Software becomes a blank white screen:
+
+We have bigger problems.
+
+------------------------------------------------------------
+
+49. DO NOT TRACK
+
+Some browsers and systems provide \"Do Not Track\" signals.
+
+Support for such signals may vary depending on the service.
+
+We may not respond to every possible browser privacy setting.
+
+Technology is complicated.
+
+There are approximately seven million privacy settings on the internet.
+
+We cannot keep track of all of them.
+
+------------------------------------------------------------
+
+50. SECURITY RECOMMENDATIONS
+
+We recommend that you:
+
+- Keep your operating system updated.
+- Keep the Software updated.
+- Use strong passwords.
+- Use different passwords for different accounts.
+- Enable multi-factor authentication where available.
+- Avoid suspicious links.
+- Avoid suspicious downloads.
+- Avoid suspicious USB drives.
+- Avoid suspicious pirates.
+
+The final recommendation is surprisingly difficult.
+
+------------------------------------------------------------
+
+51. USB DRIVES
+
+Do not plug random USB drives into your computer.
+
+If someone hands you a USB drive and says:
+
+\"Don't worry, it's totally safe.\"
+
+you should worry.
+
+Especially if it is labeled:
+
+\"FREE MONEY\"
+
+or:
+
+\"IMPORTANT SECRET\"
+
+or:
+
+\"DO NOT OPEN\"
+
+Actually, especially the last one.
+
+------------------------------------------------------------
+
+52. PHISHING
+
+Phishing is when someone attempts to trick you into providing sensitive information.
+
+Common examples include messages pretending to be:
+
+- Banks.
+- Schools.
+- Game companies.
+- Friends.
+- Employers.
+- Governments.
+- Pirates.
+
+If someone says:
+
+\"ARRR, GIVE ME YOUR PASSWORD OR I WILL WALK THE PLANK!\"
+
+do not give them your password.
+
+We have repeatedly discussed this.
+
+------------------------------------------------------------
+
+53. IMPERSONATION
+
+We will not intentionally impersonate another company, developer, government, or individual.
+
+If somebody contacts you claiming to be us, verify that the communication is genuine.
+
+If they ask for money, passwords, or extremely suspicious information:
+
+Stop.
+
+Think.
+
+Verify.
+
+Then probably don't do it.
+
+------------------------------------------------------------
+
+54. DATA MINIMIZATION
+
+We believe in collecting only information that is reasonably necessary for a particular purpose.
+
+We do not need:
+
+Your blood type.
+
+Your shoe size.
+
+Your favorite dinosaur.
+
+Your Minecraft username.
+
+Your lunch order.
+
+Your zodiac sign.
+
+Your first pet's name.
+
+Your secret handshake.
+
+Your pirate rank.
+
+Unless the Software somehow becomes a pirate dating application.
+
+It has not.
+
+Please stop asking.
+
+------------------------------------------------------------
+
+55. INFORMATION YOU VOLUNTARILY PROVIDE
+
+If you voluntarily provide information, you are responsible for deciding whether that information is appropriate to share.
+
+Do not send us:
+
+- Passwords.
+- Private keys.
+- Recovery codes.
+- Bank details.
+- Government identification numbers.
+- Sensitive medical information.
+- Private photographs.
+
+Unless specifically required by a legitimate process.
+
+And even then, verify who you are sending it to.
+
+------------------------------------------------------------
+
+56. PRIVATE KEYS
+
+Never send your private cryptographic keys to strangers.
+
+Never send them to us.
+
+Never send them to the Captain.
+
+Never send them to the parrot.
+
+The parrot doesn't even know what cryptography is.
+
+------------------------------------------------------------
+
+57. YOUR DEVICE
+
+We may receive limited technical information about your device when you interact with online services.
+
+This may include operating system type, software version, or other technical information.
+
+We do not automatically receive a magical list of every file on your device.
+
+Computers do not work like that.
+
+Usually.
+
+------------------------------------------------------------
+
+58. THE DOWNLOADS FOLDER
+
+We solemnly promise not to open your Downloads folder just because it exists.
+
+We don't know why there are 14 copies of:
+
+setup_final.exe
+
+setup_final2.exe
+
+setup_final_REAL.exe
+
+setup_final_REAL2.exe
+
+setup_final_USE_THIS_ONE.exe
+
+Please clean your Downloads folder.
+
+------------------------------------------------------------
+
+59. DESKTOP PRIVACY
+
+Your desktop is your desktop.
+
+We do not need to know what is on it.
+
+If your desktop contains 347 icons, that is your business.
+
+If your desktop contains one folder named:
+
+\"ORGANIZE LATER\"
+
+we already know that folder will never be organized.
+
+------------------------------------------------------------
+
+60. SCREEN CAPTURE
+
+The Software should not capture your screen unless a feature explicitly requires screen capture and you have provided the appropriate permission.
+
+If you see an application unexpectedly requesting screen capture access, consider whether the request makes sense.
+
+If it doesn't:
+
+Don't allow it.
+
+Your screen is yours.
+
+------------------------------------------------------------
+
+61. KEYBOARD INPUT
+
+The Software processes keyboard input when necessary for normal functionality.
+
+For example, if you type something into a text field, the Software needs to know what you typed.
+
+This does not mean the Software should record every key you press everywhere on your computer.
+
+We do not need to know every time you type the letter \"A\".
+
+There are many A's.
+
+We are not interested.
+
+------------------------------------------------------------
+
+62. CLIPBOARD
+
+If the Software provides copy-and-paste functionality, it may interact with clipboard contents when you explicitly use that functionality.
+
+Do not assume every application needs access to your clipboard.
+
+If an application asks for clipboard access without a clear reason, think carefully before allowing it.
+
+Your clipboard may contain sensitive information.
+
+It may also contain the word:
+
+banana
+
+We cannot know.
+
+------------------------------------------------------------
+
+63. NOTIFICATIONS
+
+If notifications are enabled, the Software may display notifications related to its functionality.
+
+Notifications may include:
+
+- Updates.
+- Downloads.
+- Errors.
+- Warnings.
+- Important messages.
+- Completely unnecessary pirate jokes.
+
+You may disable notifications where supported.
+
+The Captain will be disappointed.
+
+------------------------------------------------------------
+
+64. PRIVACY SETTINGS
+
+If the Software provides privacy settings, you may use them to control available features.
+
+We recommend reviewing privacy settings occasionally.
+
+Software changes.
+
+Operating systems change.
+
+The internet changes.
+
+The Captain changes his mind approximately every six minutes.
+
+------------------------------------------------------------
+
+65. CHANGES TO THIS PRIVACY POLICY
+
+We may update this Privacy Policy from time to time.
+
+When we make changes, the updated date may be changed.
+
+If the changes are significant, additional notice may be provided where appropriate.
+
+We may not personally send you a carrier pigeon.
+
+We do not own a carrier pigeon.
+
+We have the parrot.
+
+The parrot is not qualified to deliver legal notices.
+
+------------------------------------------------------------
+
+66. THE PARROT'S PRIVACY
+
+The parrot has requested that we include this section.
+
+The parrot's personal information includes:
+
+- Name: Parrot.
+- Age: Unknown.
+- Location: Probably somewhere.
+- Occupation: Parrot.
+- Favorite food: Seeds.
+- Favorite activity: Screaming.
+- Password: Unknown.
+- Email: Unknown.
+- IP address: Probably not applicable.
+
+The Developers respect the parrot's privacy.
+
+The parrot has declined to comment.
+
+------------------------------------------------------------
+
+67. THE CAPTAIN'S PRIVACY
+
+The Captain has also requested privacy.
+
+The Captain's personal information includes:
+
+Name: Captain.
+
+Address: Unknown.
+
+Age: Classified.
+
+Favorite food: Sandwiches.
+
+Favorite operating system: Depends on the day.
+
+Password: We are not writing it here.
+
+Pet: The parrot.
+
+Current location: Probably not the submarine.
+
+The Captain's privacy is important.
+
+Please do not attempt to locate the Captain.
+
+------------------------------------------------------------
+
+68. EMPLOYEE PRIVACY
+
+The Developers may have team members who contribute to the Software.
+
+We do not publish private information about team members without appropriate authorization.
+
+Please do not attempt to identify developers based on their typing style.
+
+Please do not send developers strange messages at 2 AM.
+
+Please do not ask developers for their passwords.
+
+Please do not send the developers pictures of your router.
+
+Unless something is seriously wrong with the router.
+
+Then maybe.
+
+------------------------------------------------------------
+
+69. LAW ENFORCEMENT
+
+We may disclose information when required to do so by applicable law or valid legal process.
+
+We do not voluntarily hand over information simply because someone says:
+
+\"Trust me, I'm the police.\"
+
+Verify everything properly.
+
+The internet is full of people claiming to be important.
+
+Some are.
+
+Some are not.
+
+------------------------------------------------------------
+
+70. LEGAL REQUESTS
+
+If we receive a valid legal request for information, we may be required to comply.
+
+We may challenge requests where appropriate.
+
+We may also be unable to provide information that we simply do not possess.
+
+You cannot ask us to provide the location of your missing sock.
+
+We don't have it.
+
+------------------------------------------------------------
+
+71. GOVERNMENT REQUESTS
+
+Government agencies may request information under applicable laws.
+
+We will handle such requests according to the law.
+
+We do not have a secret government hotline.
+
+We do not have a red phone.
+
+We do have a phone.
+
+It is probably on silent.
+
+------------------------------------------------------------
+
+72. DATA OWNERSHIP
+
+Where you provide your own personal information, you generally retain your rights over that information subject to applicable law.
+
+We do not suddenly own your name because you typed it into a form.
+
+If your name is Steve, it remains Steve.
+
+Congratulations, Steve.
+
+------------------------------------------------------------
+
+73. THIRD-PARTY LINKS
+
+The Software may contain links to third-party websites.
+
+We are not responsible for the privacy practices of those websites.
+
+Before providing personal information to a third-party website, review its privacy policy.
+
+If the website's privacy policy begins with:
+
+\"HAHA WE OWN YOUR SOUL\"
+
+you may want to leave.
+
+------------------------------------------------------------
+
+74. SOCIAL ENGINEERING
+
+We will never intentionally ask you to bypass security controls for the purpose of giving us access to private information.
+
+If someone says:
+
+\"Just disable your antivirus for five minutes.\"
+
+Ask why.
+
+If the answer is:
+
+\"Because the Captain said so.\"
+
+That is not a sufficient answer.
+
+------------------------------------------------------------
+
+75. ANTI-VIRUS SOFTWARE
+
+Security software may identify the Software as suspicious depending on how the Software is packaged or distributed.
+
+A warning does not automatically mean the Software is malicious.
+
+However, you should never ignore security warnings blindly.
+
+Investigate the warning.
+
+Verify the source.
+
+Use common sense.
+
+If the warning says:
+
+\"THIS FILE WILL DESTROY EVERYTHING\"
+
+perhaps do not run it immediately.
+
+------------------------------------------------------------
+
+76. OPEN SOURCE COMPONENTS
+
+The Software may contain third-party libraries or open-source components.
+
+Those components may have their own licenses and privacy implications.
+
+Where applicable, information about those components may be included with the Software.
+
+We thank the people who create open-source software.
+
+Without them, many projects would probably explode.
+
+------------------------------------------------------------
+
+77. TELEMETRY
+
+If telemetry is enabled, telemetry may provide anonymous or aggregated information about Software usage.
+
+Telemetry may help answer questions such as:
+
+\"Does this button work?\"
+
+\"How often does the emulator crash?\"
+
+\"Why is everybody clicking this?\"
+
+\"What happened to the settings menu?\"
+
+\"Who removed the settings menu?\"
+
+\"Who is responsible?\"
+
+\"Captain?\"
+
+The Captain has declined to comment.
+
+------------------------------------------------------------
+
+78. ANONYMOUS DATA
+
+Anonymous or aggregated information is information that is not intended to identify individual users.
+
+For example:
+
+\"30% of users clicked this button.\"
+
+is different from:
+
+\"Steve clicked this button at 4:31 PM.\"
+
+We prefer the first one.
+
+Steve prefers the second one.
+
+We don't know why.
+
+------------------------------------------------------------
+
+79. AGGREGATED DATA
+
+Aggregated data may be used to understand general usage patterns.
+
+For example:
+
+- Average session length.
+- Most commonly used features.
+- Common crash types.
+- General operating system distribution.
+
+We may learn that 72% of users are using Windows.
+
+We may learn that 18% are using Linux.
+
+We may learn that 10% are using something we cannot identify.
+
+We will investigate.
+
+------------------------------------------------------------
+
+80. DATA ACCURACY
+
+We attempt to keep information accurate where appropriate.
+
+However, technical systems can contain errors.
+
+If our system thinks you are a pirate named Steve Banana:
+
+Please contact us.
+
+We will investigate.
+
+------------------------------------------------------------
+
+81. DATA STORAGE
+
+Information may be stored electronically.
+
+Electronic storage can fail.
+
+Hard drives can fail.
+
+SSDs can fail.
+
+Servers can fail.
+
+Cloud services can fail.
+
+USB drives can disappear mysteriously.
+
+Backups can fail.
+
+The only thing guaranteed in computing is that something will eventually break.
+
+------------------------------------------------------------
+
+82. OFFLINE USE
+
+Some features may work entirely offline.
+
+When the Software is offline, it cannot communicate with online services that require an internet connection.
+
+This is a very complicated way of saying:
+
+No internet = no internet.
+
+Thank you for attending this technical explanation.
+
+------------------------------------------------------------
+
+83. ONLINE FEATURES
+
+Online features may require network communication.
+
+When online, the Software may communicate with servers necessary to provide the requested feature.
+
+Network communication may expose certain technical information such as IP addresses.
+
+This is normal.
+
+The internet would be significantly less useful if computers could not communicate with other computers.
+
+------------------------------------------------------------
+
+84. SERVER LOGS
+
+Servers may maintain technical logs.
+
+These logs may include information such as:
+
+- IP addresses.
+- Request times.
+- Error codes.
+- Browser or client information.
+- Requested resources.
+
+These logs help keep services running.
+
+Without logs, diagnosing certain problems would involve asking the server:
+
+\"Why did you die?\"
+
+and hoping it answers.
+
+Servers are not particularly talkative.
+
+------------------------------------------------------------
+
+85. RETENTION OF SERVER LOGS
+
+Server logs may be retained for limited periods depending on operational and security requirements.
+
+After they are no longer needed, they may be deleted or anonymized.
+
+We are not keeping every server log until the heat death of the universe.
+
+Probably.
+
+------------------------------------------------------------
+
+86. ACCOUNT INFORMATION
+
+If the Software provides optional accounts, account information may be processed to provide account functionality.
+
+You may be required to provide basic information such as an email address.
+
+Do not use someone else's email address without permission.
+
+Do not create 900 accounts just because the registration form allows it.
+
+We will become suspicious.
+
+------------------------------------------------------------
+
+87. ACCOUNT SECURITY
+
+You are responsible for protecting your account credentials.
+
+If someone gains access to your account because you gave them your password, that is a problem.
+
+If someone gains access because you used:
+
+password
+
+as your password:
+
+That is also a problem.
+
+Please use a stronger password.
+
+------------------------------------------------------------
+
+88. TWO-FACTOR AUTHENTICATION
+
+Where available, multi-factor authentication may provide additional security.
+
+We recommend using it.
+
+It makes your account harder to access even if someone obtains your password.
+
+Yes, it takes an extra few seconds.
+
+No, you will not perish.
+
+Please enable it.
+
+------------------------------------------------------------
+
+89. YOUR RESPONSIBILITY
+
+Privacy is a shared responsibility.
+
+We are responsible for how we handle information under our control.
+
+You are responsible for the information you choose to share.
+
+Third parties are responsible for their own services.
+
+The internet is responsible for approximately none of this.
+
+------------------------------------------------------------
+
+90. THE INTERNET
+
+The internet is enormous.
+
+There are billions of devices.
+
+Millions of websites.
+
+Countless applications.
+
+Many strange forums.
+
+Thousands of suspicious download buttons.
+
+At least one website dedicated entirely to pictures of potatoes.
+
+We cannot control the internet.
+
+Nobody can.
+
+Probably not even the Captain.
+
+------------------------------------------------------------
+
+91. SUSPICIOUS WEBSITES
+
+If a website asks for personal information that seems unnecessary, stop and think.
+
+If a website asks you to:
+
+\"ENTER YOUR PASSWORD TO PROVE YOU ARE HUMAN\"
+
+do not.
+
+If a website asks you to:
+
+\"DOWNLOAD THIS FILE TO REMOVE 83 VIRUSES\"
+
+do not.
+
+If a website asks you to:
+
+\"PAY $500 IN GIFT CARDS TO UNLOCK YOUR COMPUTER\"
+
+definitely do not.
+
+Call someone you trust.
+
+------------------------------------------------------------
+
+92. PHISHING EMAILS
+
+Be careful with emails that create urgency.
+
+Examples:
+
+\"ACT NOW!\"
+
+\"YOUR ACCOUNT WILL BE DELETED!\"
+
+\"FINAL WARNING!\"
+
+\"CAPTAIN WILL BE ANGRY!\"
+
+Urgency is commonly used to make people act before thinking.
+
+Slow down.
+
+Check the sender.
+
+Check the link.
+
+Do not panic.
+
+------------------------------------------------------------
+
+93. LINKS
+
+Before clicking a link, consider where it leads.
+
+If the link looks suspicious, do not click it.
+
+If the link says:
+
+free-money.example
+
+and you know perfectly well that free money does not exist:
+
+don't.
+
+The Captain has never received free money.
+
+Except once.
+
+It was a coupon.
+
+It expired.
+
+------------------------------------------------------------
+
+94. PRIVACY INCIDENTS
+
+If you believe your information has been mishandled, contact us through an appropriate support channel.
+
+Provide enough information for us to investigate.
+
+Please do not send us your entire hard drive.
+
+We don't have enough USB ports.
+
+------------------------------------------------------------
+
+95. REPORTING SECURITY PROBLEMS
+
+If you discover a security vulnerability, please report it responsibly.
+
+Do not publicly publish sensitive information before the issue can be addressed where responsible disclosure is appropriate.
+
+Do not exploit the vulnerability just because you can.
+
+Do not steal information to prove that you could steal information.
+
+That is not a good bug report.
+
+------------------------------------------------------------
+
+96. RESPONSIBLE DISCLOSURE
+
+A good security report might include:
+
+- Description of the issue.
+- Steps to reproduce it.
+- Affected version.
+- Expected behavior.
+- Actual behavior.
+- Potential impact.
+
+A bad security report might say:
+
+\"I HACKED YOU LOL\"
+
+and nothing else.
+
+Please be more specific.
+
+------------------------------------------------------------
+
+97. DATA PROTECTION CONTACT
+
+For privacy-related questions, please use the official contact method provided with the Software or on the official project website.
+
+Do not contact random people claiming to be developers.
+
+Do not message the Captain's cousin.
+
+Do not message the parrot.
+
+The parrot does not check email.
+
+------------------------------------------------------------
+
+98. CHANGES IN OWNERSHIP
+
+If the Software or project is transferred, merged, acquired, or otherwise becomes someone else's problem, applicable privacy practices may change.
+
+Where required, users will be notified appropriately.
+
+The Captain may sell the ship.
+
+There is no ship.
+
+We need to stop mentioning the ship.
+
+------------------------------------------------------------
+
+99. DATA PROCESSING PRINCIPLES
+
+We aim to follow several general principles:
+
+- Collect only what is reasonably necessary.
+- Use information for legitimate purposes.
+- Protect information appropriately.
+- Avoid unnecessary retention.
+- Provide transparency.
+- Respect applicable privacy rights.
+
+These are serious principles.
+
+The parrot agrees.
+
+The parrot has no idea what they mean.
+
+------------------------------------------------------------
+
+100. FINAL PRIVACY STATEMENT
+
+Your privacy matters.
+
+Your personal information matters.
+
+Your passwords matter.
+
+Your files matter.
+
+Your computer matters.
+
+Your questionable Downloads folder also matters.
+
+We aim to treat information responsibly and transparently.
+
+We do not want your passwords.
+
+We do not want your bank information.
+
+We do not want your private conversations.
+
+We do not want your diary.
+
+We do not want your embarrassing screenshots.
+
+We do not want your browser history.
+
+We especially do not want to know what you searched five minutes ago.
+
+Please keep those things to yourself.
+
+------------------------------------------------------------
+
+101. THE FINAL FINAL PRIVACY STATEMENT
+
+We have now reached the end of this Privacy Policy.
+
+If you actually read all of it:
+
+Congratulations.
+
+You have demonstrated patience that the Developers do not possess.
+
+If you skipped everything:
+
+We understand.
+
+If you scrolled directly to the bottom:
+
+We expected that.
+
+If you searched for the word \"password\":
+
+We know.
+
+JUST KIDDING.
+
+We don't know.
+
+That's the point.
+
+------------------------------------------------------------
+
+102. THE PARROT'S FINAL PRIVACY STATEMENT
+
+The parrot would like to remind you:
+
+DO NOT GIVE STRANGERS YOUR PASSWORD.
+
+The parrot would also like a cracker.
+
+The Developers cannot guarantee the cracker.
+
+The parrot is disappointed.
+
+------------------------------------------------------------
+
+103. THE CAPTAIN'S FINAL PRIVACY STATEMENT
+
+The Captain would like to confirm:
+
+We do not need your password.
+
+We do not need your credit card.
+
+We do not need your home address.
+
+We do not need your secrets.
+
+We do not need your browser history.
+
+We do not need your treasure map.
+
+We do not need your pirate credentials.
+
+We do not need your parrot.
+
+Please keep the parrot.
+
+------------------------------------------------------------
+
+104. ABSOLUTELY FINAL DISCLAIMER
+
+This Privacy Policy is intended to explain privacy practices in a general and understandable manner.
+
+It is not legal advice.
+
+It does not create a lawyer-client relationship.
+
+The Developers are not acting as your attorneys.
+
+The Captain is not an attorney.
+
+The parrot is not an attorney.
+
+The parrot has never attended law school.
+
+The parrot cannot represent you in court.
+
+Please stop asking the parrot.
+
+------------------------------------------------------------
+
+105. THANK YOU
+
+Thank you for taking the time to read this Privacy Policy.
+
+Your privacy is important.
+
+Your security is important.
+
+Your personal information is important.
+
+Your computer is important.
+
+Your sanity after reading this document is also important.
+
+Please take a break.
+
+Drink some water.
+
+Look away from the screen.
+
+Touch grass.
+
+Return to the installer.
+
+Click the button.
+
+Install the questionable software.
+
+ARRR.
+
+------------------------------------------------------------
+
+END OF PRIVACY POLICY
+
+No personal information was harmed during the writing of this document.
+
+The Captain remains anonymous.
+
+The parrot remains loud.
+
+Your Downloads folder remains suspicious.
+
+Thank you."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Installer/PrivacyPolicy"]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 811.0
+offset_right = 833.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I accept."
+
+[node name="Button2" type="Button" parent="Installer/PrivacyPolicy"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 811.0
+offset_right = 1256.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I deny."
+
+[node name="Ad2" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="TextureRect" type="TextureRect" parent="Installer/Ad2"]
+layout_mode = 0
+offset_left = 402.00006
+offset_top = 63.000008
+offset_right = 2034.0
+offset_bottom = 1287.0
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("6_p2epf")
+
+[node name="Button" type="Button" parent="Installer/Ad2"]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 811.0
+offset_right = 833.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I accept."
+
+[node name="Button2" type="Button" parent="Installer/Ad2"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 811.0
+offset_right = 1256.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I deny."
+
+[node name="BindingPolicy" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Installer/BindingPolicy"]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 215.0
+offset_right = 1388.0
+offset_bottom = 803.0
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="Installer/BindingPolicy/ScrollContainer"]
+custom_minimum_size = Vector2(1021, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "BINDING POLICY
+Because apparently Terms & Conditions weren't confusing enough.
+
+Effective Date: Whenever we remember to update this page
+Last Updated: Probably today
+Document Version: 7.3.1.2.9-final-final-REAL
+
+Welcome to the Binding Policy of [SKETCHY EMULATION APP NAME], hereafter referred to as \"The Program,\" \"The Software,\" \"This Thing,\" \"Our Magnificent Piece of Software,\" or, when it crashes, \"that stupid emulator.\"
+
+By installing, opening, launching, clicking, double-clicking, accidentally launching, staring at, or otherwise acknowledging the existence of this application, you agree to the following Binding Policy.
+
+If you do not agree, please close the installer.
+
+If you cannot close the installer, please restart your computer.
+
+If restarting your computer does not work, please reconsider your life choices.
+
+1. WHAT IS THIS POLICY?
+
+This Binding Policy exists to establish the extremely important rules governing the relationship between you, the Program, and the mysterious people who apparently thought making an emulator installer was a good idea.
+
+Unlike the Terms and Conditions, which explain what you may or may not do, and the Privacy Policy, which explains what information we may or may not care about, this document exists primarily to make the word \"binding\" appear enough times that it sounds legally intimidating.
+
+This policy is binding.
+
+Very binding.
+
+Extremely binding.
+
+Like a zip file.
+
+2. THE BINDING
+
+By continuing past this screen, you acknowledge that this policy is binding upon you.
+
+You are also bound by the Terms and Conditions.
+
+You are bound by the Privacy Policy.
+
+You are bound by the laws of wherever you happen to be.
+
+You are bound by the laws of wherever the developer happens to be.
+
+You are bound by common sense, although we understand that may be asking a lot.
+
+You are not, however, physically bound to your chair.
+
+We cannot do that.
+
+Probably.
+
+3. INSTALLATION BINDING
+
+Installing the Program means you have voluntarily chosen to place our files somewhere on your computer.
+
+We appreciate your confidence.
+
+Once installed, the Program may create folders, files, shortcuts, configuration files, logs, caches, temporary files, extremely important-looking files, and other things that computers apparently require in order to function.
+
+You agree not to become emotionally attached to any of these files.
+
+You further agree that deleting random files from the installation directory and then complaining that the Program no longer works is not considered a valid warranty claim.
+
+If you uninstall the Program and discover that you have deleted something important beforehand, that is between you and your Recycle Bin.
+
+4. THE \"I DIDN'T READ IT\" CLAUSE
+
+We know you didn't read this.
+
+We know.
+
+We saw you scroll directly to the bottom.
+
+You probably didn't read the Terms and Conditions either.
+
+You probably didn't read the Privacy Policy.
+
+You may have even clicked \"I Agree\" without looking at what you were agreeing to.
+
+This document therefore contains a special clause stating that you are still responsible for everything you agreed to, even if you didn't read it.
+
+Nice try.
+
+5. EMULATION BINDING
+
+The Program may be used for legitimate emulation-related purposes.
+
+What constitutes a legitimate purpose depends on applicable law and circumstances.
+
+We provide software.
+
+We do not provide legal advice.
+
+We do not provide legal representation.
+
+We are definitely not your lawyer.
+
+Please stop emailing us asking whether something is legal.
+
+We don't know.
+
+Our legal department consists of a guy named Carlos who once watched a YouTube video about copyright law.
+
+Carlos is not a lawyer.
+
+Carlos has specifically requested that we mention this.
+
+6. ROMS, ISOS, BIOS FILES, AND OTHER THINGS
+
+The Program may allow you to interact with files commonly associated with emulation.
+
+You are responsible for ensuring that you have the appropriate rights to possess, create, download, copy, modify, or use those files.
+
+We do not magically grant you ownership of anything simply because our software can open it.
+
+If you put something into the emulator and it works, congratulations.
+
+If you put something into the emulator and it explodes your computer, congratulations on discovering experimental computing.
+
+7. THE PIRATE CLAUSE
+
+Despite the suspicious appearance of this application, the presence of pirate-themed graphics, and the fact that the developer may occasionally use words like \"ARRR,\" we do not claim that you are an actual pirate.
+
+You may not use this software to board ships.
+
+You may not demand treasure.
+
+You may not make people walk the plank.
+
+You may not replace your Windows login sound with an unnecessarily loud pirate scream and then blame us.
+
+You may, however, wear a pirate hat while using the Program.
+
+That is between you and the hat.
+
+8. PERFORMANCE BINDING
+
+The Program is provided on an \"it works on our computer\" basis.
+
+Your computer may:
+
+Run the Program perfectly.
+Run the Program slowly.
+Run the Program extremely slowly.
+Run the Program while making concerning noises.
+Refuse to run the Program.
+Run the Program at 900 FPS for absolutely no reason.
+Run the Program at 3 FPS despite having a graphics card capable of rendering the universe.
+Crash because you have 47 Chrome tabs open.
+Crash because you have 2 Chrome tabs open.
+Crash because computers are complicated.
+
+We are not responsible for your computer deciding that today is the day it becomes a toaster.
+
+9. THE RAM CLAUSE
+
+If the Program displays an error stating:
+
+ERROR: NOT ENOUGH RAM
+
+you are encouraged to remain calm.
+
+Do not immediately purchase 128 GB of RAM.
+
+Do not throw your computer out of a window.
+
+Do not contact NASA.
+
+Do not blame the refrigerator.
+
+The error may be entirely fictional.
+
+Or it may be entirely accurate.
+
+We don't know.
+
+10. UPDATES
+
+The Program may receive updates.
+
+Updates may:
+
+Add features.
+Remove features.
+Change features.
+Break features.
+Fix things.
+Accidentally break the things that were previously fixed.
+Introduce completely unrelated problems.
+Make the installer look slightly different.
+Change absolutely nothing.
+
+By installing an update, you acknowledge that software development is essentially controlled chaos with version numbers.
+
+11. BETA SOFTWARE
+
+If you are using a beta, experimental, development, preview, unstable, nightly, cursed, haunted, or otherwise suspicious version of the Program, additional binding applies.
+
+You agree that:
+
+Things may break.
+
+Things may break spectacularly.
+
+Your save file might break.
+
+Your configuration might break.
+
+The emulator might break.
+
+The installer might break.
+
+The developer's sanity might break.
+
+You have been warned.
+
+12. BUGS
+
+If you find a bug, congratulations!
+
+You have discovered free entertainment.
+
+You may report the bug if a reporting system exists.
+
+Please provide useful information such as:
+
+What happened.
+What you expected to happen.
+What actually happened.
+What you clicked.
+What version you were using.
+Whether you sacrificed a goat beforehand.
+
+The last one is optional.
+
+Please do not report:
+
+\"IT DOESN'T WORK\"
+
+with no additional information.
+
+That tells us approximately as much as saying:
+
+\"The computer is being computer.\"
+
+13. FEATURE REQUESTS
+
+You may request features.
+
+You may politely request features.
+
+You may enthusiastically request features.
+
+You may not demand that we add your incredibly specific feature by tomorrow morning.
+
+For example:
+
+\"Please add support for this obscure console manufactured in 1998 by a company that disappeared in 2003.\"
+
+is a reasonable request.
+
+\"ADD IT OR I WILL FIND YOU\"
+
+is not.
+
+Please choose the first option.
+
+14. THE BUTTON BINDING
+
+Buttons are provided for your convenience.
+
+If a button says \"Install,\" it probably installs something.
+
+If a button says \"Cancel,\" it probably cancels something.
+
+If a button says \"Continue,\" it probably continues something.
+
+If a button says \"Do Not Press,\" you already pressed it, didn't you?
+
+We know.
+
+15. THE \"BACK\" BUTTON
+
+The Back button is not a time machine.
+
+Pressing Back will not undo:
+
+Poor decisions.
+Deleted files.
+Embarrassing messages.
+Your search history.
+That thing you said in 2017.
+Installing the wrong version of the emulator.
+
+We apologize for any inconvenience.
+
+16. THE INTERNET BINDING
+
+Some parts of the Program may require an Internet connection.
+
+Internet connections are mysterious.
+
+They can disappear.
+
+They can become slow.
+
+They can decide that your computer is connected to the Internet but simultaneously refuse to connect to anything.
+
+We are not responsible for your Internet Service Provider deciding that you have had enough Internet for today.
+
+17. THIRD-PARTY SOFTWARE
+
+The Program may interact with software, libraries, operating systems, drivers, runtimes, frameworks, APIs, or other components created by people who are not us.
+
+Those people are responsible for their own software.
+
+We are responsible for ours.
+
+The computer is responsible for being confusing.
+
+Everyone has responsibilities.
+
+18. MODIFICATION BINDING
+
+You may modify the Program where legally permitted and where the applicable license allows it.
+
+If you modify the Program and it stops working, please do not send us an email saying:
+
+\"Your emulator is broken.\"
+
+There is a very good chance you broke it.
+
+We respect your creativity.
+
+We do not respect your ability to blame us for it.
+
+19. NO MAGIC WARRANTY
+
+We do not guarantee that the Program will:
+
+Work forever.
+Work tomorrow.
+Work on your particular computer.
+Work with your particular game.
+Work after you modified it.
+Work after Windows updates itself at 3:00 AM.
+Work after you deleted system32.
+Work after you installed 14 suspicious antivirus programs.
+Work after you downloaded \"RAM_BOOSTER_FINAL_REAL.exe.\"
+
+Especially the last one.
+
+Please stop downloading things called that.
+
+20. LIABILITY
+
+To the maximum extent permitted by applicable law, we are not responsible for damages arising from your use or inability to use the Program.
+
+This includes, where legally permissible:
+
+Lost files.
+Lost saves.
+Lost progress.
+Lost sleep.
+Lost patience.
+Lost dignity.
+Lost friendships because you spent 14 hours configuring an emulator instead of going outside.
+
+Please go outside occasionally.
+
+21. COMMON SENSE
+
+You agree to use common sense.
+
+If something looks dangerous, suspicious, broken, radioactive, haunted, or like it was designed by someone who hasn't slept in three days, exercise caution.
+
+The Program cannot physically stop you from doing stupid things.
+
+Unfortunately.
+
+22. ENFORCEMENT
+
+We reserve the right to enforce this Binding Policy where appropriate and legally permissible.
+
+However, we would strongly prefer not to.
+
+We have other things to do.
+
+Like fixing bugs.
+
+And making the next version.
+
+And wondering why someone is trying to emulate a game from a console that nobody has heard of.
+
+23. CHANGES TO THIS POLICY
+
+This Binding Policy may change.
+
+When it does, the updated version will become the new Binding Policy.
+
+If the policy changes significantly, we may inform you.
+
+If it changes because we corrected a typo from \"emultor\" to \"emulator,\" we probably won't.
+
+You are encouraged to occasionally check this document.
+
+You will probably not.
+
+That's okay.
+
+We know.
+
+24. SEVERABILITY
+
+If one part of this policy is found to be invalid, unenforceable, ridiculous, poorly written, grammatically questionable, or somehow printed upside-down, the remaining sections shall remain effective to the extent permitted by applicable law.
+
+Basically:
+
+If one piece falls apart, we glue the rest back together.
+
+Very professional.
+
+25. ENTIRE AGREEMENT
+
+This Binding Policy, together with the Terms and Conditions, Privacy Policy, applicable licenses, and any other documents explicitly incorporated into them, constitutes the entire agreement between you and the Program regarding the matters covered herein.
+
+That is a very fancy way of saying:
+
+\"Please read the other documents too.\"
+
+26. FINAL BINDING STATEMENT
+
+By clicking \"I Agree,\" \"Accept,\" \"Continue,\" \"Install,\" or any other button that reasonably indicates acceptance, you acknowledge that:
+
+You have been given an opportunity to read this Binding Policy.
+
+You understand that this document is intended to be binding to the extent permitted by applicable law.
+
+You understand that we are not your lawyer.
+
+You understand that Carlos is definitely not your lawyer.
+
+You understand that emulation does not automatically give you the right to use copyrighted software.
+
+You understand that your computer is not legally classified as a pirate ship.
+
+You understand that downloading suspicious files is generally a bad idea.
+
+You understand that pressing random buttons may produce random results.
+
+You understand that this document is intentionally much longer than necessary.
+
+And most importantly:
+
+You understand that you have scrolled through approximately 4,000 words of legally questionable pirate nonsense just to reach this button.
+
+Congratulations.
+
+You may now continue.
+
+BINDING POLICY ACCEPTED."
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Installer/BindingPolicy"]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 811.0
+offset_right = 833.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I accept."
+
+[node name="Button2" type="Button" parent="Installer/BindingPolicy"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 811.0
+offset_right = 1256.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I deny."
+
+[node name="Ad3" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="TextureRect" type="TextureRect" parent="Installer/Ad3"]
+layout_mode = 0
+offset_left = 402.00006
+offset_top = 63.000008
+offset_right = 2034.0
+offset_bottom = 1287.0
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("7_yw2ys")
+
+[node name="Button" type="Button" parent="Installer/Ad3"]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 811.0
+offset_right = 833.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I accept."
+
+[node name="Button2" type="Button" parent="Installer/Ad3"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 811.0
+offset_right = 1256.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I deny."
+
+[node name="Ad4" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="TextureRect" type="TextureRect" parent="Installer/Ad4"]
+layout_mode = 0
+offset_left = 402.00006
+offset_top = 63.000008
+offset_right = 2034.0
+offset_bottom = 1287.0
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("8_snolq")
+
+[node name="Button" type="Button" parent="Installer/Ad4"]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 811.0
+offset_right = 833.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I accept."
+
+[node name="Button2" type="Button" parent="Installer/Ad4"]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 811.0
+offset_right = 1256.0
+offset_bottom = 918.0
+theme_override_font_sizes/font_size = 45
+text = "I deny."
+
+[node name="Captcha1" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="Button" type="Button" parent="Installer/Captcha1"]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 377.0
+offset_right = 1329.0
+offset_bottom = 646.0
+icon = ExtResource("10_mjnos")
+
+[node name="Download" type="Control" parent="Installer"]
+visible = false
+anchors_preset = 0
+offset_left = 94.0
+offset_top = 29.0
+offset_right = 1827.0
+offset_bottom = 1080.0
+
+[node name="downloading" type="Label" parent="Installer/Download"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 269.0
+offset_right = 453.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Downloading..."
+
+[node name="downloading2" type="Label" parent="Installer/Download"]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 269.0
+offset_right = 453.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0, 0.5084171, 2.8878452e-07, 1)
+theme_override_font_sizes/font_size = 50
+text = "Download Complete... Please Close the Window..."
+
+[node name="ProgressBar" type="ProgressBar" parent="Installer/Download"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 364.0
+offset_right = 1649.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 60
+
+[connection signal="pressed" from="Installer/TextureRect/X" to="Installer" method="_on_x_pressed_close"]
+[connection signal="pressed" from="Installer/TextureRect/X2" to="Installer" method="_on_x_2_pressed_close2"]
+[connection signal="pressed" from="Installer/TextureRect/X3" to="Installer" method="_on_x_3_pressed_close3"]

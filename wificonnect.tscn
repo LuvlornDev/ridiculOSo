@@ -1,0 +1,75 @@
+[gd_scene load_steps=0 format=3 uid="uid://dnmvi2ycwtfhg"]
+
+[ext_resource type="Script" uid="uid://bddu3cj3oikkr" path="res://wificonnect.gd" id="1_tm57s"]
+[ext_resource type="Texture2D" uid="uid://bcpqk1ehs1jmh" path="res://step1.jpg" id="1_unujo"]
+[ext_resource type="Texture2D" uid="uid://woh56w7ftxiv" path="res://ihugbre.jpg" id="2_nno66"]
+[ext_resource type="Texture2D" uid="uid://c567nh8kmpvr1" path="res://paso2.jpg" id="4_bwjxk"]
+[ext_resource type="Texture2D" uid="uid://5ad25vj83oyo" path="res://ciscorouterfinal.png" id="5_yfi2o"]
+[ext_resource type="Script" uid="uid://cvdqu7nkbm6j4" path="res://labelclicker.gd" id="6_wv5b0"]
+
+[node name="Control" type="Control" unique_id=1310497844]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tm57s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=738384435]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1440452440]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_unujo")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=611084905]
+layout_mode = 0
+offset_left = 1191.0
+offset_top = 432.99997
+offset_right = 2199.0
+offset_bottom = 841.0
+scale = Vector2(0.7, 0.7)
+
+[node name="Button" type="Button" parent="CenterContainer" unique_id=353978222]
+layout_mode = 2
+icon = ExtResource("2_nno66")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1303406614]
+layer = -1
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2" unique_id=1646847144]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_bwjxk")
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=954422935]
+visible = false
+layout_mode = 0
+offset_left = 287.0
+offset_top = 581.0
+offset_right = 595.0
+offset_bottom = 889.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Button" type="Button" parent="CenterContainer2" unique_id=1450052605]
+layout_mode = 2
+icon = ExtResource("5_yfi2o")
+
+[node name="Label" type="Label" parent="." unique_id=422350672]
+visible = false
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1157.0001
+offset_top = 674.00006
+offset_right = 1257.0001
+offset_bottom = 697.00006
+scale = Vector2(10, 10)
+script = ExtResource("6_wv5b0")
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed_wifi"]
+[connection signal="pressed" from="CenterContainer2/Button" to="Label" method="_on_button_pressed_cl"]

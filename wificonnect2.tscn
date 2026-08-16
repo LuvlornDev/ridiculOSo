@@ -1,0 +1,47 @@
+[gd_scene load_steps=0 format=3 uid="uid://d1tkvg63pghmp"]
+
+[ext_resource type="Texture2D" uid="uid://cte1vq1op3idk" path="res://41mas.jpg" id="1_pekws"]
+[ext_resource type="Texture2D" uid="uid://5ad25vj83oyo" path="res://ciscorouterfinal.png" id="2_qmpfk"]
+[ext_resource type="Script" uid="uid://bn26artukfq06" path="res://labelcliocker41.gd" id="3_qmpfk"]
+
+[node name="Control" type="Control" unique_id=1450426543]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2018702925]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=266164006]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_pekws")
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=1027480245]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 581.0
+offset_right = 595.0
+offset_bottom = 889.0
+scale = Vector2(1.5, 1.5)
+
+[node name="Button" type="Button" parent="CenterContainer2" unique_id=892953410]
+layout_mode = 2
+icon = ExtResource("2_qmpfk")
+
+[node name="Label" type="Label" parent="." unique_id=1501394219]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+layout_mode = 0
+offset_left = 1157.0001
+offset_top = 674.00006
+offset_right = 1257.0001
+offset_bottom = 697.00006
+scale = Vector2(10, 10)
+script = ExtResource("3_qmpfk")
+
+[connection signal="pressed" from="CenterContainer2/Button" to="Label" method="_on_button_pressed"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=0 format=3 uid="uid://d0yw23we0bh3q"]
+
+[ext_resource type="Script" uid="uid://d02mmkchtkhnv" path="res://step_3.gd" id="1_arc4q"]
+[ext_resource type="Texture2D" uid="uid://cf8rf260x5np4" path="res://sammeroclaroop.jpg" id="1_jimh7"]
+[ext_resource type="Texture2D" uid="uid://by5x7a2ghycf0" path="res://arrowq.jpg" id="2_arc4q"]
+
+[node name="Control" type="Control" unique_id=145910871]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_arc4q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=785474854]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1626411689]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_jimh7")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1640600447]
+layout_mode = 0
+offset_left = 1545.0
+offset_top = 865.0
+offset_right = 2165.0
+offset_bottom = 1217.0
+scale = Vector2(0.6, 0.6)
+
+[node name="Button" type="Button" parent="CenterContainer" unique_id=65772004]
+layout_mode = 2
+icon = ExtResource("2_arc4q")
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed"]

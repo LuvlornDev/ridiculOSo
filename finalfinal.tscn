@@ -1,0 +1,25 @@
+[gd_scene load_steps=0 format=3 uid="uid://d0p3k06s44nkw"]
+
+[ext_resource type="Script" uid="uid://cyfjpffrcq2xi" path="res://finalfinal.gd" id="1_lkp8r"]
+[ext_resource type="Texture2D" uid="uid://bhhw36kl2fqmk" path="res://endingfinalfinal.jpg" id="1_xunxr"]
+
+[node name="Control" type="Control" unique_id=1317338503]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lkp8r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1850393026]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1089590918]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_xunxr")
+
+[node name="Timer" type="Timer" parent="." unique_id=1125146736]
+wait_time = 15.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
