@@ -11,10 +11,7 @@ You have to complete a series of "piracy" inspired puzzles to advance through th
 
 This includes adware, eternal Terms and Conditions, countless CAPTCHAs and computer crashes.
 
-# Credits:
-
-
-## ChocorramoLover67 Studios
+# Credits:<br><br>ChocorramoLover67 Studios
 
 ### A game by:
 
