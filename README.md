@@ -43,6 +43,4 @@ Sebastian Arias
 
 
 
-## Thank u for Playing!
-
-## And... Thank you HackClub for being so awesome!
+## Thank u for Playing!<br>And... Thank you HackClub for being so awesome!
