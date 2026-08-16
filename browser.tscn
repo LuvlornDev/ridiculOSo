@@ -1,0 +1,368 @@
+[gd_scene load_steps=20 format=3 uid="uid://dao6qqwo13hps"]
+
+[ext_resource type="Script" uid="uid://favgybvg4i5g" path="res://browser.gd" id="1_7oh8c"]
+[ext_resource type="Texture2D" uid="uid://cd61sc25nu5a4" path="res://img/browser.jpg" id="2_qltgv"]
+[ext_resource type="Texture2D" uid="uid://b6idr37ea44ab" path="res://img/macondoole.png" id="3_x0m2j"]
+[ext_resource type="Script" uid="uid://dsejaq8akdvy2" path="res://san_andresito.gd" id="4_w5c5x"]
+[ext_resource type="Texture2D" uid="uid://canuldq7q8m3q" path="res://img/sanandresito.png" id="4_x0m2j"]
+[ext_resource type="Texture2D" uid="uid://dqumcr2gw2vyn" path="res://img/dino.png" id="5_w5c5x"]
+[ext_resource type="Texture2D" uid="uid://debhqioe4w718" path="res://img/ads/neki.jpg" id="6_4tuot"]
+[ext_resource type="Texture2D" uid="uid://bfxrinnk4j7gb" path="res://img/ads/genoprazol.png" id="7_yrw2i"]
+[ext_resource type="Texture2D" uid="uid://kjf1pfihkv2i" path="res://img/ads/mieltertos.png" id="8_x1ry0"]
+[ext_resource type="Texture2D" uid="uid://ctdhpri3yid0w" path="res://img/ads/mlgchoco.png" id="9_s7aoa"]
+[ext_resource type="Texture2D" uid="uid://dmb722efcn10v" path="res://img/ads/parcera.jpg" id="10_01vwb"]
+[ext_resource type="Texture2D" uid="uid://dqhjhfg36t4xm" path="res://img/ads/whosthis.png" id="11_ygaax"]
+[ext_resource type="Texture2D" uid="uid://di6sh8yny0l5i" path="res://arepa.jpg" id="12_lsd2m"]
+[ext_resource type="Texture2D" uid="uid://c4oyp4mxe5tmx" path="res://img/ads/betplay.jpg" id="13_sm7w3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w5c5x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tuot"]
+bg_color = Color(0.14112255, 0.6237554, 7.70092e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88882"]
+bg_color = Color(0.06407363, 0.3568502, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwy6n"]
+bg_color = Color(0.15899953, 0.68518054, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5c5x"]
+bg_color = Color(0.08829307, 0.66235715, 0.17272115, 1)
+
+[node name="Browser" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7oh8c")
+
+[node name="Browser" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_qltgv")
+
+[node name="Button" type="Button" parent="Browser"]
+layout_mode = 0
+offset_left = 1697.0
+offset_top = 2.0
+offset_right = 1911.0
+offset_bottom = 41.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_w5c5x")
+
+[node name="Macondoole" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Macondoole"]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 139.0
+offset_right = 1894.0
+offset_bottom = 1163.0
+scale = Vector2(0.755, 0.755)
+texture = ExtResource("3_x0m2j")
+
+[node name="LineEdit" type="LineEdit" parent="Macondoole"]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 700.0
+offset_right = 1360.0
+offset_bottom = 750.0
+theme_override_font_sizes/font_size = 26
+placeholder_text = "Search for Macondo..."
+
+[node name="Button" type="Button" parent="Macondoole"]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 780.0
+offset_right = 1060.0
+offset_bottom = 830.0
+theme_override_font_sizes/font_size = 26
+text = "Search :)"
+
+[node name="SanAndresito" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_w5c5x")
+
+[node name="sanandresito" type="TextureRect" parent="SanAndresito"]
+layout_mode = 0
+offset_left = 33.000004
+offset_top = 26.0
+offset_right = 1953.0
+offset_bottom = 1106.0
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("4_x0m2j")
+
+[node name="download" type="Button" parent="SanAndresito"]
+layout_mode = 0
+offset_left = 587.0
+offset_top = 480.0
+offset_right = 1333.0
+offset_bottom = 641.0
+theme_override_font_sizes/font_size = 67
+theme_override_styles/normal = SubResource("StyleBoxFlat_4tuot")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_88882")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bwy6n")
+text = "▼ fre downlod"
+
+[node name="ProgressBar" type="ProgressBar" parent="SanAndresito"]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 535.0
+offset_right = 1610.0
+offset_bottom = 595.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_w5c5x")
+
+[node name="ErrorLabel" type="Label" parent="SanAndresito"]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 450.0
+offset_right = 1444.0
+offset_bottom = 511.0
+theme_override_colors/font_color = Color(0.7176471, 0.13725491, 0.101960786, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "BROWSER SATURATED. DOWNLOAD STOPPED"
+
+[node name="Success" type="Label" parent="SanAndresito"]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 450.0
+offset_right = 1632.0
+offset_bottom = 511.0
+theme_override_colors/font_color = Color(0, 0.4783482, 0.20199442, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "DOWNLOAD COMPLETED SUCCESSFULLY.  CLOSE THIS WINDOW"
+
+[node name="Resume" type="Button" parent="SanAndresito"]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 615.0
+offset_right = 986.0
+offset_bottom = 646.0
+scale = Vector2(1.69, 1.69)
+text = "Resume Download"
+
+[node name="Ads" type="Control" parent="SanAndresito"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Ad1" type="Control" parent="SanAndresito/Ads"]
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 350.0
+
+[node name="img" type="TextureRect" parent="SanAndresito/Ads/Ad1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_4tuot")
+expand_mode = 1
+
+[node name="close" type="Button" parent="SanAndresito/Ads/Ad1"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X"
+
+[node name="Ad2" type="Control" parent="SanAndresito/Ads"]
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 350.0
+
+[node name="img" type="TextureRect" parent="SanAndresito/Ads/Ad2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_yrw2i")
+expand_mode = 1
+
+[node name="close" type="Button" parent="SanAndresito/Ads/Ad2"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X"
+
+[node name="Ad3" type="Control" parent="SanAndresito/Ads"]
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 350.0
+
+[node name="img" type="TextureRect" parent="SanAndresito/Ads/Ad3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_x1ry0")
+expand_mode = 1
+
+[node name="close" type="Button" parent="SanAndresito/Ads/Ad3"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X"
+
+[node name="Ad4" type="Control" parent="SanAndresito/Ads"]
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 350.0
+
+[node name="img" type="TextureRect" parent="SanAndresito/Ads/Ad4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_s7aoa")
+expand_mode = 1
+
+[node name="close" type="Button" parent="SanAndresito/Ads/Ad4"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X"
+
+[node name="Ad5" type="Control" parent="SanAndresito/Ads"]
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 350.0
+
+[node name="img" type="TextureRect" parent="SanAndresito/Ads/Ad5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_01vwb")
+expand_mode = 1
+
+[node name="close" type="Button" parent="SanAndresito/Ads/Ad5"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X"
+
+[node name="Ad6" type="Control" parent="SanAndresito/Ads"]
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 350.0
+
+[node name="img" type="TextureRect" parent="SanAndresito/Ads/Ad6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ygaax")
+expand_mode = 1
+
+[node name="close" type="Button" parent="SanAndresito/Ads/Ad6"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X"
+
+[node name="Ad7" type="Control" parent="SanAndresito/Ads"]
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 350.0
+
+[node name="img" type="TextureRect" parent="SanAndresito/Ads/Ad7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_lsd2m")
+expand_mode = 1
+
+[node name="close" type="Button" parent="SanAndresito/Ads/Ad7"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X"
+
+[node name="Ad8" type="Control" parent="SanAndresito/Ads"]
+anchors_preset = 0
+offset_right = 460.0
+offset_bottom = 350.0
+
+[node name="img" type="TextureRect" parent="SanAndresito/Ads/Ad8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_sm7w3")
+expand_mode = 1
+
+[node name="close" type="Button" parent="SanAndresito/Ads/Ad8"]
+layout_mode = 0
+offset_right = 31.0
+offset_bottom = 31.0
+text = "X"
+
+[node name="Dino" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="dino" type="TextureRect" parent="Dino"]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 328.0
+offset_right = 1120.0
+offset_bottom = 648.0
+texture = ExtResource("5_w5c5x")
+
+[node name="Label" type="Label" parent="Dino"]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 670.0
+offset_right = 1240.0
+offset_bottom = 735.0
+theme_override_colors/font_color = Color(0.4, 0.4, 0.4, 1)
+theme_override_font_sizes/font_size = 47
+text = "Esta webpageo no existo"
+
+[node name="GoBack" type="Button" parent="Dino"]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 774.29
+offset_right = 1135.0
+offset_bottom = 874.28973
+theme_override_font_sizes/font_size = 49
+text = "Go Back :("
+
+[connection signal="pressed" from="Browser/Button" to="." method="_on_button_pressed_close_arepa"]
