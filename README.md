@@ -11,22 +11,38 @@ You have to complete a series of "piracy" inspired puzzles to advance through th
 
 This includes adware, eternal Terms and Conditions, countless CAPTCHAs and computer crashes.
 
-Credits:
+# Credits:
 
-ChocorramoLover67 Studios
-A game by:
+
+## ChocorramoLover67 Studios
+
+### A game by:
+
 Santiago Barajas
+
 Daniel Galindo
+
 Jesus David Duarte
 
-Special Thanks:
-HackClub
-Nathan Alspaugh
-Clay Nicholson (Background Image)
-Cisco
-Every single member of HackClub's Macondo Staff
-Every single participant @ HackClub Macondo
-Sebasstian Arias
 
-Thank u for Playing!
-And... Thank you HackClub for being so awesome!
+### Special Thanks:
+
+HackClub
+
+Nathan Alspaugh
+
+Clay Nicholson (Background Image)
+
+Cisco
+
+Every single member of HackClub's Macondo Staff
+
+Every single participant @ HackClub Macondo
+
+Sebastian Arias
+
+
+
+## Thank u for Playing!
+
+## And... Thank you HackClub for being so awesome!
